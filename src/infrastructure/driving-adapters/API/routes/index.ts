@@ -5,10 +5,6 @@ import billRoutes from './bill.routes'
 import entityRoutes from './entity.routes'
 import itemRoutes from './item.routes'
 import thirdRoutes from './third.routes'
-import conceptRoutes from './concept.routes'
-import costCenterRoutes from './costCenter.route'
-import accountRoutes from './account.routes'
-import receiptRoutes from './receipt.routes'
 import supportDocumentRoutes from './supportDocument.routes'
 import emailRoutes from './email.routes'
 import { UserAlreadyExistException } from '../../../../domain/exceptions/user/UserAlreadyExist.exception'
@@ -32,10 +28,6 @@ route.use('/api/v2/bill', billRoutes)
 route.use('/api/v2/entity', entityRoutes)
 route.use('/api/v2/item', itemRoutes)
 route.use('/api/v2/third', thirdRoutes)
-route.use('/api/v2/concept', conceptRoutes)
-route.use('/api/v2/cost-center', costCenterRoutes)
-route.use('/api/v2/account', accountRoutes)
-route.use('/api/v2/receipt', receiptRoutes)
 route.use('/api/v2/support-document', supportDocumentRoutes)
 route.use('/api/v2/email', emailRoutes)
 

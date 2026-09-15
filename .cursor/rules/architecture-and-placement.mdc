@@ -1,0 +1,36 @@
+---
+description: Hexagonal architecture and where new files belong in the API
+alwaysApply: true
+---
+
+# Architecture and File Placement (facturador-crecer-api)
+
+Follow hexagonal layout. Place new files next to similar existing ones. Do not invent new top-level folders.
+
+## Layers
+
+| Kind | Path |
+|---|---|
+| Use cases | `src/application/useCases/{UseCaseName}/index.ts` |
+| Entities | `src/domain/entities/{Name}.entity.ts` |
+| Repository contracts | `src/domain/repositories/{Name}.repository.ts` |
+| Domain services | `src/domain/services/{feature}/{Name}.service.ts` |
+| Shared helpers | `src/domain/services/utils/` (only if reused) |
+| Mappers | `src/domain/mappers/{feature}/` |
+| Exceptions | `src/domain/exceptions/{common\|entity\|user}/` |
+| Controllers | `src/infrastructure/driving-adapters/API/controllers/{feature}/` |
+| Routes | `src/infrastructure/driving-adapters/API/routes/` |
+| Middlewares | `src/infrastructure/driving-adapters/API/middlewares/` |
+| DynamoDB repos | `src/infrastructure/implementations/AWS/dynamoDB/` |
+
+## Flow
+
+Route → Controller → Use Case → Domain service / repository interface → Infrastructure implementation.
+
+## Rules
+
+- Controllers stay thin: validate input, call use case, map HTTP response.
+- Business rules live in use cases or domain services, never in routes.
+- Reuse existing mappers/services before creating new ones.
+- Prefer editing an existing file over adding a new abstraction.
+- Match existing naming: `createReceipt.controller.ts`, `ReceiptCreator`, `DynamoDBReceiptRepository.ts`.

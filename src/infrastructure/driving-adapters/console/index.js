@@ -56,6 +56,10 @@ const contables_seminario = [
   {
     idItem: '07',
     cuenta_contable: '4160050300'
+  },
+  {
+    idItem: '08',
+    cuenta_contable: '4170140100'
   }
 ]
 

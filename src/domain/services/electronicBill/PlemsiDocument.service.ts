@@ -3,6 +3,51 @@ import { Entity } from '../../entities/Entity.entity';
 
 const URL_PLEMSI = process.env.URL_PLEMSI || '';
 const PREFIX_SUPPORT_DOCUMENT_PLEMSI = process.env.PREFIX_SUPPORT_DOCUMENT_PLEMSI || 'DS';
+const MEASURE_UNIT_UNIDAD = 70;
+
+interface PlemsiTaxTotal {
+  tax_id: number
+  percent: number
+  tax_amount: number
+  taxable_amount: number
+}
+
+interface PlemsiCreditNoteSupportDocumentItem {
+  unit_measure_id: number
+  line_extension_amount: number
+  free_of_charge_indicator: boolean
+  allowance_charges: unknown[]
+  tax_totals: PlemsiTaxTotal[]
+  description: string
+  notes: string
+  code: string
+  type_item_identification_id: number
+  price_amount: number
+  base_quantity: number
+  invoiced_quantity: number
+  brandname: string
+  modelname: string
+}
+
+interface PlemsiCreditNoteSupportDocumentPayload {
+  discrepancy: { code: number; description: string }
+  resolution: string
+  prefix: string
+  number: number
+  items: PlemsiCreditNoteSupportDocumentItem[]
+  seller: Record<string, unknown>
+  foot_note: string
+  head_note: string
+  invoiceReference: { issue_date: string; uuid: string; number: string }
+  generalAllowances: unknown[]
+  allowanceTotal: number
+  invoiceBaseTotal: number
+  invoiceTaxExclusiveTotal: number
+  invoiceTaxInclusiveTotal: number
+  totalToPay: number
+  allTaxTotals: PlemsiTaxTotal[]
+  allHoldingsTaxTotals: PlemsiTaxTotal[]
+}
 
 export class PlemsiDocumentService {
   /**
@@ -281,6 +326,202 @@ export class PlemsiDocumentService {
       }
     })
      
+    return response.data;
+  }
+
+  /** Gets a support-document credit note from Plemsi by CUDE. */
+  async getElectronicCreditNoteSupportDocument(entity: Entity, cude: string) {
+    try {
+      if (!entity.apiKeyPlemsi) {
+        throw new Error('Clave de Plemsi no configurada para esta entidad');
+      }
+
+      const url = `${URL_PLEMSI}/purchase/credit/one?by=cude&value=${cude}`;
+
+      const response = await axios.get(url, {
+        headers: {
+          Authorization: `Bearer ${entity.apiKeyPlemsi}`
+        }
+      });
+
+      return response.data;
+    } catch (error: unknown) {
+      console.log('Error obteniendo nota crédito de documento soporte:', error);
+      throw new Error('Nota crédito de documento soporte no encontrada');
+    }
+  }
+
+  /** Builds and submits a support-document credit note payload to Plemsi. */
+  async buildCreditNoteSupportDocumentFromSupportDocument(
+    supportDocument: Record<string, unknown>,
+    entity: Entity,
+    creditNoteNumber: number
+  ): Promise<unknown> {
+    if (!entity.resolutionNCDS || !entity.resolutionTextNCDS || !entity.prefixNCDS) {
+      throw new Error('No se ha configurado la resolución de nota crédito de documento soporte para esta entidad');
+    }
+
+    if (entity.lastCreditSupportDocumentNumber === undefined) {
+      throw new Error('No se ha configurado la resolución de nota crédito de documento soporte para esta entidad');
+    }
+
+    if (!entity.apiKeyPlemsi) {
+      throw new Error('Clave de Plemsi no configurada para esta entidad');
+    }
+
+    const legalTotals = supportDocument.legal_monetary_totals as Record<string, unknown>;
+    const seller = supportDocument.seller as Record<string, unknown>;
+
+    let postalZoneCode = '000000';
+    if (seller.postal_zone_code) {
+      postalZoneCode = String(seller.postal_zone_code);
+    }
+
+    const items: PlemsiCreditNoteSupportDocumentItem[] = [];
+    const invoiceLines = supportDocument.invoice_lines;
+
+    if (Array.isArray(invoiceLines)) {
+      for (const line of invoiceLines) {
+        const lineRecord = line as Record<string, unknown>;
+        const taxTotals: PlemsiTaxTotal[] = [];
+
+        if (Array.isArray(lineRecord.tax_totals)) {
+          for (const tax of lineRecord.tax_totals) {
+            const taxRecord = tax as Record<string, unknown>;
+            taxTotals.push({
+              tax_id: Number(taxRecord.tax_id),
+              percent: Number(taxRecord.percent),
+              tax_amount: Number(taxRecord.tax_amount),
+              taxable_amount: Number(taxRecord.taxable_amount)
+            });
+          }
+        }
+
+        let allowanceCharges: unknown[] = [];
+        if (Array.isArray(lineRecord.allowance_charges)) {
+          allowanceCharges = lineRecord.allowance_charges;
+        }
+
+        let unitMeasureId = MEASURE_UNIT_UNIDAD;
+        if (lineRecord.unit_measure_id !== undefined && lineRecord.unit_measure_id !== null) {
+          const parsedUnitMeasureId = Number(lineRecord.unit_measure_id);
+          if (!Number.isNaN(parsedUnitMeasureId)) {
+            unitMeasureId = parsedUnitMeasureId;
+          }
+        }
+
+        items.push({
+          unit_measure_id: unitMeasureId,
+          line_extension_amount: Number(lineRecord.line_extension_amount),
+          free_of_charge_indicator: Boolean(lineRecord.free_of_charge_indicator),
+          allowance_charges: allowanceCharges,
+          tax_totals: taxTotals,
+          description: String(lineRecord.description ?? ''),
+          notes: String(lineRecord.notes ?? ''),
+          code: String(lineRecord.code ?? ''),
+          type_item_identification_id: Number(lineRecord.type_item_identification_id),
+          price_amount: Number(lineRecord.price_amount),
+          base_quantity: Number(lineRecord.base_quantity),
+          invoiced_quantity: Number(lineRecord.invoiced_quantity),
+          brandname: 'NA',
+          modelname: 'NA'
+        });
+      }
+    }
+
+    const allTaxTotals: PlemsiTaxTotal[] = [];
+    if (Array.isArray(supportDocument.tax_totals)) {
+      for (const tax of supportDocument.tax_totals) {
+        const taxRecord = tax as Record<string, unknown>;
+        allTaxTotals.push({
+          tax_id: Number(taxRecord.tax_id),
+          tax_amount: Number(taxRecord.tax_amount),
+          percent: Number(taxRecord.percent),
+          taxable_amount: Number(taxRecord.taxable_amount)
+        });
+      }
+    }
+
+    const allHoldingsTaxTotals: PlemsiTaxTotal[] = [];
+    if (Array.isArray(supportDocument.with_holding_tax_total)) {
+      for (const tax of supportDocument.with_holding_tax_total) {
+        const taxRecord = tax as Record<string, unknown>;
+        allHoldingsTaxTotals.push({
+          tax_id: Number(taxRecord.tax_id),
+          tax_amount: Number(taxRecord.tax_amount),
+          percent: Number(taxRecord.percent),
+          taxable_amount: Number(taxRecord.taxable_amount)
+        });
+      }
+    }
+
+    let headNote = '';
+    if (supportDocument.head_note) {
+      headNote = String(supportDocument.head_note);
+    }
+
+    let footNote = '';
+    if (supportDocument.foot_note) {
+      footNote = String(supportDocument.foot_note);
+    }
+
+    let allowanceTotal = 0;
+    if (supportDocument.allowance_total !== undefined) {
+      allowanceTotal = Number(supportDocument.allowance_total);
+    }
+
+    let generalAllowances: unknown[] = [];
+    if (Array.isArray(supportDocument.general_allowances)) {
+      generalAllowances = supportDocument.general_allowances;
+    }
+
+    const creditNotePayload: PlemsiCreditNoteSupportDocumentPayload = {
+      discrepancy: {
+        code: 2,
+        description: 'Anulación solicitada por el emisor'
+      },
+      resolution: entity.resolutionNCDS,
+      prefix: entity.prefixNCDS,
+      number: creditNoteNumber,
+      items,
+      seller: {
+        identification_number: seller.identification_number,
+        dv: seller.dv,
+        name: seller.name,
+        phone: seller.phone,
+        address: seller.address,
+        postal_zone_code: postalZoneCode,
+        email: seller.email,
+        merchant_registration: seller.merchant_registration,
+        type_document_identification_id: seller.type_document_identification_id,
+        type_organization_id: seller.type_organization_id,
+        type_liability_id: seller.type_liability_id,
+        municipality_id: seller.municipality_id,
+        type_regime_id: seller.type_regime_id
+      },
+      foot_note: footNote,
+      head_note: headNote,
+      invoiceReference: {
+        issue_date: String(supportDocument.date ?? ''),
+        uuid: String(supportDocument.cude ?? ''),
+        number: String(supportDocument.consecutive ?? '')
+      },
+      generalAllowances,
+      allowanceTotal,
+      invoiceBaseTotal: Number(legalTotals.line_extension_amount),
+      invoiceTaxExclusiveTotal: Number(legalTotals.tax_exclusive_amount),
+      invoiceTaxInclusiveTotal: Number(legalTotals.tax_inclusive_amount),
+      totalToPay: Number(legalTotals.payable_amount),
+      allTaxTotals,
+      allHoldingsTaxTotals
+    };
+
+    const response = await axios.post(`${URL_PLEMSI}/purchase/credit`, creditNotePayload, {
+      headers: {
+        Authorization: `Bearer ${entity.apiKeyPlemsi}`
+      }
+    });
+
     return response.data;
   }
 }

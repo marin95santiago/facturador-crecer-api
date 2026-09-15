@@ -16,11 +16,6 @@ export interface Address {
   }
 }
 
-export interface ReceiptNumbers {
-  prefix: string
-  lastReceiptNumber: number
-}
-
 export interface Entity {
   id: string
   name: string
@@ -43,7 +38,10 @@ export interface Entity {
   resolutionTextNC?: string
   prefixNC?: string
   lastCreditNumber?: number
-  receiptNumbers?: ReceiptNumbers[],
+  resolutionNCDS?: string
+  resolutionTextNCDS?: string
+  prefixNCDS?: string
+  lastCreditSupportDocumentNumber?: number
   prefix?: string
   planExpiredAt?: string
 }

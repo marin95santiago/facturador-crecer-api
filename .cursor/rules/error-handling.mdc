@@ -1,0 +1,30 @@
+---
+description: try/catch and error handling conventions for the API
+alwaysApply: true
+---
+
+# Error Handling (facturador-crecer-api)
+
+## try/catch
+
+- Wrap async work that can fail (I/O, external APIs, persistence, parsing) in `try/catch`.
+- In controllers and use cases, catch errors, log useful context, and rethrow domain/HTTP errors or return the proper response.
+- Never use empty `catch` blocks. Never swallow errors silently.
+- Prefer `async/await` with `try/catch` over `.catch()`.
+
+```typescript
+try {
+  const receipt = await this.receiptCreator.run(payload);
+  response.status(201).json(receipt);
+} catch (error) {
+  logger.error('Failed to create receipt', { error });
+  next(error);
+}
+```
+
+## Guidelines
+
+- Use existing domain exceptions when they fit.
+- Client-facing messages may be in Spanish; internal logs stay in English.
+- Do not catch only to rethrow the same error with no added value unless required by a boundary (controller → middleware).
+- Validate inputs early and fail fast with clear errors.

@@ -1,0 +1,36 @@
+---
+description: English-first code language and short function comments
+alwaysApply: true
+---
+
+# Language and Comments (facturador-crecer-api)
+
+## Language
+
+- Write all code in English: identifiers, file names, types, comments, logs for developers, commit-oriented messages in code.
+- Allowed Spanish (or business locale) only for:
+  - Values persisted in the database when the domain already stores Spanish
+  - Error messages returned to the client / end user
+  - Existing domain labels that must match stored data (status codes, catalog values, etc.)
+- Do not mix Spanish variable or function names with English ones.
+
+```typescript
+// GOOD
+throw new Error('El recibo no existe'); // client-facing
+logger.error('Failed to create receipt', { receiptId }); // developer-facing
+
+// BAD
+const reciboId = receipt.id;
+```
+
+## Comments
+
+- Every exported function, use case method, controller handler, domain service method, and repository method must have a short one-line comment describing its purpose.
+- Keep comments brief (one line; two only if necessary). No essays.
+- Do not comment obvious lines (`// increment counter`, `// return result`).
+- Comment business rules, constraints, and non-obvious decisions when needed.
+
+```typescript
+/** Creates a receipt and persists it through the repository. */
+async run(receiptData: ReceiptData): Promise<Receipt> {
+```

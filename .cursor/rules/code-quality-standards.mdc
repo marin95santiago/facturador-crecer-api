@@ -1,0 +1,45 @@
+---
+description: Core coding standards for clean, readable TypeScript in facturador-crecer-api
+alwaysApply: true
+---
+
+# Code Quality Standards (facturador-crecer-api)
+
+Act as a senior engineer. Prefer readability over cleverness. Follow existing project conventions.
+
+## Control flow
+
+- Never use ternary operators (`? :`). Use `if`, `else if`, and `else`.
+- Prefer early returns. Max 3 nesting levels. Always use braces.
+- Use `async/await` only. Do not mix with `.then()` or `.catch()`.
+- Never use `Array.forEach()`. Use `for` or `for...of`.
+
+```typescript
+// BAD
+const label = isActive ? 'Active' : 'Inactive';
+
+// GOOD
+let label = 'Inactive';
+if (isActive) {
+  label = 'Active';
+}
+```
+
+## Functions
+
+- One clear business responsibility per function.
+- Do not extract a function if the logic is used in only one place and is fewer than ~10 lines. Keep it inline.
+- Extract only when the same logic is reused in two or more places, or when a block is hard to read in context.
+- Do not invent helpers, wrappers, services, or layers without a real need.
+
+## Naming and types
+
+- No single-letter names. No ambiguous abbreviations (`usr`, `cfg`, `tmp`, `obj`, `arr`, `val`).
+- Avoid `any`. Prefer explicit types, interfaces, or generics.
+- Prefer native Node.js modules before new dependencies.
+
+## Priorities
+
+readability > maintainability > performance > architectural complexity
+
+Minimize code. Do not overengineer. If requirements are unclear, ask before inventing behavior.
