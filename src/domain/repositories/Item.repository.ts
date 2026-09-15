@@ -5,4 +5,5 @@ export interface ItemRepository {
   save: (item: Item) => Promise<Item>
   getByCode: (code: string, entityId: string) => Promise<Item | null>
   update: (item: Item) => Promise<Item>
+  deleteByEntityId: (entityId: string) => Promise<number>
 }

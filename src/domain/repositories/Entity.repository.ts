@@ -5,4 +5,5 @@ export interface EntityRepository {
   getById: (id: string) => Promise<Entity | null>
   getByDocument: (document: string) => Promise<Entity | null>
   update: (entity: Entity) => Promise<Entity>
+  delete: (id: string) => Promise<void>
 }

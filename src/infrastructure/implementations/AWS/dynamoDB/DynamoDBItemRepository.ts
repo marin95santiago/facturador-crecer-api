@@ -4,6 +4,7 @@ import { DynamoDBClient, PutItemCommand, GetItemCommand, QueryCommand } from '@a
 import { marshall } from '@aws-sdk/util-dynamodb'
 import { ItemRepository } from '../../../../domain/repositories/Item.repository'
 import { Item } from '../../../../domain/entities/Item.entity'
+import { batchDeleteItems } from './batchDeleteItems'
 
 dotenv.config({
   path: path.resolve(__dirname, '../../../../../.env')
@@ -179,5 +180,55 @@ export class DynamoDBItemRepository implements ItemRepository {
     }
 
     return item
+  }
+
+  /** Deletes all items belonging to an entity and returns the deleted count. */
+  async deleteByEntityId (entityId: string): Promise<number> {
+    const tableName = `${this._project}-${this._environment}-${this._table}`
+    const keysToDelete: Record<string, unknown>[] = []
+    let lastEvaluatedKey: any
+
+    do {
+      const params: {
+        TableName: string
+        IndexName: string
+        KeyConditionExpression: string
+        ExpressionAttributeValues: any
+        ExclusiveStartKey?: any
+      } = {
+        TableName: tableName,
+        IndexName: 'entityId-code-index',
+        KeyConditionExpression: 'entityId = :entityId',
+        ExpressionAttributeValues: {
+          ':entityId': {
+            S: entityId
+          }
+        }
+      }
+
+      if (lastEvaluatedKey !== undefined) {
+        params.ExclusiveStartKey = lastEvaluatedKey
+      }
+
+      const response = await this.client.send(new QueryCommand(params))
+      const items = response.Items ?? []
+
+      for (const item of items) {
+        if (item.code?.S !== undefined && item.entityId?.S !== undefined) {
+          keysToDelete.push({
+            code: item.code.S,
+            entityId: item.entityId.S
+          })
+        }
+      }
+
+      lastEvaluatedKey = response.LastEvaluatedKey
+    } while (lastEvaluatedKey !== undefined)
+
+    if (keysToDelete.length === 0) {
+      return 0
+    }
+
+    return batchDeleteItems(this.client, tableName, keysToDelete)
   }
 }

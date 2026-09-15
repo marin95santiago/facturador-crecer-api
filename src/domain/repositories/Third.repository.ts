@@ -5,4 +5,5 @@ export interface ThirdRepository {
   save: (third: Third) => Promise<Third>
   update: (third: Third) => Promise<Third>
   getByDocument: (document: string, entityId: string) => Promise<Third | null>
+  deleteByEntityId: (entityId: string) => Promise<number>
 }
