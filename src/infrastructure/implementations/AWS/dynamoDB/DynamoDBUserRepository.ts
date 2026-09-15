@@ -4,6 +4,7 @@ import { DynamoDBClient, PutItemCommand, ScanCommand, GetItemCommand, DeleteItem
 import { marshall } from '@aws-sdk/util-dynamodb'
 import { User } from '../../../../domain/entities/User.entity'
 import { UserRepository } from '../../../../domain/repositories/User.repository'
+import { batchDeleteItems } from './batchDeleteItems'
 
 dotenv.config({
   path: path.resolve(__dirname, '../../../../../.env')
@@ -173,5 +174,48 @@ export class DynamoDBUserRepository implements UserRepository {
       })
     }
     await this.client.send(new DeleteItemCommand(params))
+  }
+
+  /** Deletes all users belonging to an entity and returns the deleted count. */
+  async deleteByEntityId (entityId: string): Promise<number> {
+    const tableName = `${this._project}-${this._environment}-${this._table}`
+    const keysToDelete: Record<string, unknown>[] = []
+    let lastEvaluatedKey: any
+
+    do {
+      const params: {
+        TableName: string
+        FilterExpression: string
+        ExpressionAttributeValues: any
+        ExclusiveStartKey?: any
+      } = {
+        TableName: tableName,
+        FilterExpression: 'entityId = :entityId',
+        ExpressionAttributeValues: marshall({
+          ':entityId': entityId
+        })
+      }
+
+      if (lastEvaluatedKey !== undefined) {
+        params.ExclusiveStartKey = lastEvaluatedKey
+      }
+
+      const response = await this.client.send(new ScanCommand(params))
+      const items = response.Items ?? []
+
+      for (const item of items) {
+        if (item.id?.S !== undefined) {
+          keysToDelete.push({ id: item.id.S })
+        }
+      }
+
+      lastEvaluatedKey = response.LastEvaluatedKey
+    } while (lastEvaluatedKey !== undefined)
+
+    if (keysToDelete.length === 0) {
+      return 0
+    }
+
+    return batchDeleteItems(this.client, tableName, keysToDelete)
   }
 }

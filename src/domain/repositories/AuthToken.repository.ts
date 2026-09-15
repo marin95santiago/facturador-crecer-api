@@ -11,6 +11,7 @@ export interface AuthTokenRepository {
   getCodeByEmail: (email: string) => Promise<PendingControlCode | null>
   getByCode: (code: string) => Promise<PendingControlCode | null>
   deleteCode: (code: string, entityId: string) => Promise<void>
+  deleteByEntityId: (entityId: string) => Promise<number>
   getEmailBlock: (email: string) => Promise<{ blockedUntil: number } | null>
   setEmailBlock: (email: string, blockedUntil: number) => Promise<void>
   getIpBlock: (ip: string) => Promise<{ blockedUntil: number } | null>

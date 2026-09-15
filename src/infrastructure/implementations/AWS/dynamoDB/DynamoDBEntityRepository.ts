@@ -299,15 +299,14 @@ export class DynamoDBEntityRepository implements EntityRepository {
     return entity
   }
 
-  /*
-  async delete(id: string): Promise<void> {
+  /** Deletes an entity by id. */
+  async delete (id: string): Promise<void> {
     const params = {
-      TableName: `${this._project}-${this._environment}-Users`,
+      TableName: `${this._project}-${this._environment}-${this._table}`,
       Key: marshall({
         id
       })
     }
     await this.client.send(new DeleteItemCommand(params))
   }
-  */
 }

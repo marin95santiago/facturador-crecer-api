@@ -7,12 +7,14 @@ import itemRoutes from './item.routes'
 import thirdRoutes from './third.routes'
 import supportDocumentRoutes from './supportDocument.routes'
 import emailRoutes from './email.routes'
+import adminRoutes from './admin.routes'
 import { UserAlreadyExistException } from '../../../../domain/exceptions/user/UserAlreadyExist.exception'
 import { UserNotFoundException } from '../../../../domain/exceptions/user/UserNotFound.exception'
 import { LoginWrongPasswordException } from '../../../../domain/exceptions/user/LoginWrongPassword.exception'
 import { PermissionNotAvailableException } from '../../../../domain/exceptions/common/PermissionNotAvailable.exception'
 import { MissingPropertyException } from '../../../../domain/exceptions/common/MissingProperty.exception'
 import { EntityAlreadyExistException } from '../../../../domain/exceptions/entity/EntityAlreadyExist.exception'
+import { EntityNotFoundException } from '../../../../domain/exceptions/entity/EntityNotFound.exception'
 import { UnhandledException } from '../../../../domain/exceptions/common/Unhandled.exception'
 import { AlreadyExistException } from '../../../../domain/exceptions/common/AlreadyExist.exception'
 import { ControlUserBlockedException } from '../../../../domain/exceptions/user/ControlUserBlocked.exception'
@@ -30,6 +32,7 @@ route.use('/api/v2/item', itemRoutes)
 route.use('/api/v2/third', thirdRoutes)
 route.use('/api/v2/support-document', supportDocumentRoutes)
 route.use('/api/v2/email', emailRoutes)
+route.use('/api/v2/admin', adminRoutes)
 
 route.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   if (err instanceof UserAlreadyExistException) {
@@ -55,7 +58,11 @@ route.use((err: Error, req: Request, res: Response, next: NextFunction) => {
   } else if (err instanceof EntityAlreadyExistException) {
     res.status(400).json({
       message: err.message
-    }) 
+    })
+  } else if (err instanceof EntityNotFoundException) {
+    res.status(404).json({
+      message: err.message
+    })
   } else if (err instanceof UnhandledException) {
     res.status(500).json({
       message: err.message

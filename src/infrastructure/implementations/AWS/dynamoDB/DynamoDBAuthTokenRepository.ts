@@ -6,10 +6,12 @@ import {
   GetItemCommand,
   DeleteItemCommand,
   QueryCommand,
+  ScanCommand,
   UpdateItemCommand
 } from '@aws-sdk/client-dynamodb'
 import { marshall } from '@aws-sdk/util-dynamodb'
 import type { AuthTokenRepository, PendingControlCode } from '../../../../domain/repositories/AuthToken.repository'
+import { batchDeleteItems } from './batchDeleteItems'
 
 dotenv.config({
   path: path.resolve(__dirname, '../../../../../.env')
@@ -180,5 +182,51 @@ export class DynamoDBAuthTokenRepository implements AuthTokenRepository {
       TableName: this.tableName,
       Key: marshall({ code: pk, entityId: ATTEMPTS_SK })
     }))
+  }
+
+  /** Deletes all auth tokens belonging to an entity and returns the deleted count. */
+  async deleteByEntityId (entityId: string): Promise<number> {
+    const keysToDelete: Record<string, unknown>[] = []
+    let lastEvaluatedKey: any
+
+    do {
+      const params: {
+        TableName: string
+        FilterExpression: string
+        ExpressionAttributeValues: any
+        ExclusiveStartKey?: any
+      } = {
+        TableName: this.tableName,
+        FilterExpression: 'entityId = :entityId',
+        ExpressionAttributeValues: marshall({
+          ':entityId': entityId
+        })
+      }
+
+      if (lastEvaluatedKey !== undefined) {
+        params.ExclusiveStartKey = lastEvaluatedKey
+      }
+
+      const response = await this.client.send(new ScanCommand(params))
+
+      const items = response.Items ?? []
+
+      for (const item of items) {
+        if (item.code?.S !== undefined && item.entityId?.S !== undefined) {
+          keysToDelete.push({
+            code: item.code.S,
+            entityId: item.entityId.S
+          })
+        }
+      }
+
+      lastEvaluatedKey = response.LastEvaluatedKey
+    } while (lastEvaluatedKey !== undefined)
+
+    if (keysToDelete.length === 0) {
+      return 0
+    }
+
+    return batchDeleteItems(this.client, this.tableName, keysToDelete)
   }
 }

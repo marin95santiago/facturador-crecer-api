@@ -4,6 +4,7 @@ import { DeleteItemCommand, DynamoDBClient, PutItemCommand, QueryCommand, ScanCo
 import { marshall } from '@aws-sdk/util-dynamodb'
 import { ScheduleRepository } from '../../../../domain/repositories/Schedule.repository'
 import { Schedule } from '../../../../domain/entities/Schedule.entity'
+import { batchDeleteItems } from './batchDeleteItems'
 
 dotenv.config({
   path: path.resolve(__dirname, '../../../../../.env')
@@ -158,5 +159,51 @@ export class DynamoDBScheduleRepository implements ScheduleRepository {
     } catch (error) {
       throw error
     }
+  }
+
+  /** Deletes all schedules belonging to an entity and returns the deleted count. */
+  async deleteByEntityId (entityId: string): Promise<number> {
+    const tableName = `${this._project}-${this._environment}-${this._table}`
+    const keysToDelete: Record<string, unknown>[] = []
+    let lastEvaluatedKey: any
+
+    do {
+      const params: {
+        TableName: string
+        FilterExpression: string
+        ExpressionAttributeValues: any
+        ExclusiveStartKey?: any
+      } = {
+        TableName: tableName,
+        FilterExpression: 'entityId = :entityId',
+        ExpressionAttributeValues: marshall({
+          ':entityId': entityId
+        })
+      }
+
+      if (lastEvaluatedKey !== undefined) {
+        params.ExclusiveStartKey = lastEvaluatedKey
+      }
+
+      const response = await this.client.send(new ScanCommand(params))
+      const items = response.Items ?? []
+
+      for (const item of items) {
+        if (item.code?.S !== undefined && item.entityId?.S !== undefined) {
+          keysToDelete.push({
+            code: item.code.S,
+            entityId: item.entityId.S
+          })
+        }
+      }
+
+      lastEvaluatedKey = response.LastEvaluatedKey
+    } while (lastEvaluatedKey !== undefined)
+
+    if (keysToDelete.length === 0) {
+      return 0
+    }
+
+    return batchDeleteItems(this.client, tableName, keysToDelete)
   }
 }
