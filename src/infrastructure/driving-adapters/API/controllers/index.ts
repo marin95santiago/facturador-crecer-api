@@ -43,33 +43,6 @@ import { getAllThirds } from './third/getAllThirds.controller'
 import { updateThird } from './third/updateThird.controller'
 import { getThirdByDocument } from './third/getThirdByDocument.controller'
 
-// Concepts
-import { createConcept } from './concept/createConcept.controller'
-import { updateConcept } from './concept/updateConcept.controller'
-import { getAllConcepts } from './concept/getAllConcepts.controller'
-import { getConceptByAccount } from './concept/getConceptByAccount.controller'
-
-// CostCenter
-import { createCostCenter } from './costCenter/createCostCenter.controller'
-import { updateCostCenter } from './costCenter/updateCostCenter.controller'
-import { getAllCostCenters } from './costCenter/getAllCostCenters.controller'
-import { getCostCenterByCode } from './costCenter/getCostCenterByCode.controller'
-
-// Accounts
-import { createAccount } from './account/createAccount.controller'
-import { updateAccount } from './account/updateAccount.controller'
-import { getAllAccounts } from './account/getAllAccounts.controller'
-import { getAccountByAccount } from './account/getAccountByAccount.controller'
-import { transferBetweenAccount } from './account/transferBetweenAccount.controller'
-
-// Receipts
-import { createReceipt } from './receipt/createReceipt.controller'
-import { updateReceipt } from './receipt/updateReceipt.controller'
-import { getAllReceipts } from './receipt/getAllReceipts.controller'
-import { getReceiptByCode } from './receipt/getReceiptByCode.controller'
-import { dailyReportReceipt } from './receipt/dailyReportReceipt.controller'
-import { cancelReceipt } from './receipt/cancelReceipt.controller'
-
 // Email
 import { sendEmail } from './email/sendEmail.controller'
 
@@ -106,24 +79,5 @@ export {
   getAllThirds as getAllThirdsController,
   updateThird as updateThirdController,
   getThirdByDocument as getThirdByDocumentController,
-  createConcept as createConceptController,
-  updateConcept as updateConceptController,
-  getAllConcepts as getAllConceptsController,
-  getConceptByAccount as getConceptByAccountController,
-  createAccount as createAccountController,
-  updateAccount as updateAccountController,
-  getAllAccounts as getAllAccountsController,
-  getAccountByAccount as getAccountByAccountController,
-  transferBetweenAccount as transferBetweenAccountController,
-  createReceipt as createReceiptController,
-  updateReceipt as updateReceiptController,
-  getAllReceipts as getAllReceiptsController,
-  createCostCenter as createCostCenterController,
-  updateCostCenter as updateCostCenterController,
-  getAllCostCenters as getAllCostCentersController,
-  getCostCenterByCode as getCostCenterByCodeController,
-  getReceiptByCode as getReceiptByCodeController,
-  dailyReportReceipt as dailyReportReceiptController,
-  cancelReceipt as cancelReceiptController,
   sendEmail as sendEmailController
 }

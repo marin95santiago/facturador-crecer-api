@@ -28,7 +28,6 @@ export const createEntity = async (req: Request, res: Response, next: NextFuncti
     resolutionDS,
     resolutionTextDS,
     lastSupportDocumentNumber,
-    receiptNumbers,
     prefix
   } = req.body
 
@@ -66,13 +65,7 @@ export const createEntity = async (req: Request, res: Response, next: NextFuncti
       resolutionDS,
       resolutionTextDS,
       lastSupportDocumentNumber,
-      prefix,
-      receiptNumbers: receiptNumbers.map((rn: any) => {
-        return {
-          lastReceiptNumber: Number(rn.lastReceiptNumber),
-          prefix: rn.prefix
-        }
-      })
+      prefix
     })
 
     res.json(entityCreated)

@@ -41,7 +41,6 @@ export class DynamoDBEntityRepository implements EntityRepository {
         resolutionTextNC: entity.resolutionTextNC ?? undefined,
         prefixNC: entity.prefixNC ?? undefined,
         lastCreditNumber: entity.lastCreditNumber ? Number(entity.lastCreditNumber) : undefined,
-        receiptNumbers: entity.receiptNumbers ?? undefined,
         planExpiredAt: entity.planExpiredAt ?? undefined
       }, { removeUndefinedValues: true })
     }
@@ -154,17 +153,6 @@ export class DynamoDBEntityRepository implements EntityRepository {
       resolutionTextNC: item.resolutionTextNC?.S ?? undefined,
       prefixNC: item.prefixNC?.S ?? undefined,
       lastCreditNumber: item.lastCreditNumber?.N ? Number(item.lastCreditNumber.N) : undefined,
-      receiptNumbers: item.receiptNumbers?.L !== undefined
-        ?
-          (
-            item.receiptNumbers.L.map(rn => {
-              return {
-                prefix: rn.M?.prefix.S ?? '',
-                lastReceiptNumber: Number(rn.M?.lastReceiptNumber.N) ?? 0
-              }
-            })
-          )
-        : undefined,
       planExpiredAt: item.planExpiredAt?.S ?? undefined
     }
 
@@ -247,17 +235,6 @@ export class DynamoDBEntityRepository implements EntityRepository {
       resolutionTextNC: item.resolutionTextNC?.S ?? undefined,
       prefixNC: item.prefixNC?.S ?? undefined,
       lastCreditNumber: item.lastCreditNumber?.N ? Number(item.lastCreditNumber.N) : undefined,
-      receiptNumbers: item.receiptNumbers?.L !== undefined
-        ?
-          (
-            item.receiptNumbers.L.map(rn => {
-              return {
-                prefix: rn.M?.prefix.S ?? '',
-                lastReceiptNumber: Number(rn.M?.lastReceiptNumber.N) ?? 0
-              }
-            })
-          )
-        : undefined,
       planExpiredAt: item.planExpiredAt?.S ?? undefined
     }
 
@@ -290,7 +267,6 @@ export class DynamoDBEntityRepository implements EntityRepository {
         resolutionTextNC: entity.resolutionTextNC ?? undefined,
         prefixNC: entity.prefixNC ?? undefined,
         lastCreditNumber: entity.lastCreditNumber ? Number(entity.lastCreditNumber) : undefined,
-        receiptNumbers: entity.receiptNumbers ?? undefined,
         planExpiredAt: entity.planExpiredAt ?? undefined
       })
     }

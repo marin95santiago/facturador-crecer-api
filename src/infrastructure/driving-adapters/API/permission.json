@@ -36,33 +36,5 @@
     "create": "third_create",
     "update": "third_update",
     "list": "third_list"
-  },
-  "concept":{
-    "view": "concept_view",
-    "create": "concept_create",
-    "update": "concept_update",
-    "list": "concept_list"
-  },
-  "cost_center":{
-    "view": "cost_center_view",
-    "create": "cost_center_create",
-    "update": "cost_center_update",
-    "list": "cost_center_list"
-  },
-  "account":{
-    "view": "account_view",
-    "create": "account_create",
-    "update": "account_update",
-    "list": "account_list",
-    "transfer": "account_transfer"
-  },
-  "receipt":{
-    "view": "receipt_view",
-    "create": "receipt_create",
-    "update": "receipt_update",
-    "list": "receipt_list"
-  },
-  "report": {
-    "daily_report_receipt": "daily_report_receipt"
   }
 }
