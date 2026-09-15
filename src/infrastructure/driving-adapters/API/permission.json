@@ -23,7 +23,9 @@
   "support_document": {
     "view": "support_document_view",
     "create": "support_document_create",
-    "list": "support_document_list"
+    "list": "support_document_list",
+    "present_credit_note": "support_document_present_credit_note",
+    "list_credit_note": "support_document_list_credit_note"
   },
   "item": {
     "view": "item_view",

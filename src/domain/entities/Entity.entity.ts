@@ -38,6 +38,10 @@ export interface Entity {
   resolutionTextNC?: string
   prefixNC?: string
   lastCreditNumber?: number
+  resolutionNCDS?: string
+  resolutionTextNCDS?: string
+  prefixNCDS?: string
+  lastCreditSupportDocumentNumber?: number
   prefix?: string
   planExpiredAt?: string
 }

@@ -28,7 +28,11 @@ export const createEntity = async (req: Request, res: Response, next: NextFuncti
     resolutionDS,
     resolutionTextDS,
     lastSupportDocumentNumber,
-    prefix
+    prefix,
+    resolutionNCDS,
+    resolutionTextNCDS,
+    prefixNCDS,
+    lastCreditSupportDocumentNumber
   } = req.body
 
   const { sessionUser } = req.params
@@ -65,7 +69,11 @@ export const createEntity = async (req: Request, res: Response, next: NextFuncti
       resolutionDS,
       resolutionTextDS,
       lastSupportDocumentNumber,
-      prefix
+      prefix,
+      resolutionNCDS,
+      resolutionTextNCDS,
+      prefixNCDS,
+      lastCreditSupportDocumentNumber
     })
 
     res.json(entityCreated)

@@ -28,8 +28,11 @@ import { presentElectronicBillCreditNote } from './bill/presentElectronicBillCre
 
 // Support Document
 import { createSupportDocument } from './supportDocument/createSupportDocument.controller'
+import { getCreditNoteSupportDocumentHTML } from './supportDocument/getCreditNoteSupportDocumentHTML.controller'
+import { getCreditNoteSupportDocumentsFromPlemsi } from './supportDocument/getCreditNoteSupportDocumentsFromPlemsi.controller'
 import { getSupportDocument } from './supportDocument/getSupportDocument.controller'
 import { getSupportDocumentHTML } from './supportDocument/getSupportDocumentHTML.controller'
+import { presentSupportDocumentCreditNote } from './supportDocument/presentSupportDocumentCreditNote.controller'
 
 // Items
 import { createItem } from './item/createItem.controller'
@@ -69,8 +72,11 @@ export {
   getCreditNotesFromPlemsi as getCreditNotesFromPlemsiController,
   presentElectronicBillCreditNote as presentElectronicBillCreditNoteController,
   createSupportDocument as createSupportDocumentController,
+  getCreditNoteSupportDocumentHTML as getCreditNoteSupportDocumentHTMLController,
+  getCreditNoteSupportDocumentsFromPlemsi as getCreditNoteSupportDocumentsFromPlemsiController,
   getSupportDocument as getSupportDocumentController,
   getSupportDocumentHTML as getSupportDocumentHTMLController,
+  presentSupportDocumentCreditNote as presentSupportDocumentCreditNoteController,
   createItem as createItemController,
   getItemByCode as getItemByCodeController,
   updateItem as updateItemController,

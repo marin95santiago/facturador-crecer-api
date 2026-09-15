@@ -41,6 +41,12 @@ export class DynamoDBEntityRepository implements EntityRepository {
         resolutionTextNC: entity.resolutionTextNC ?? undefined,
         prefixNC: entity.prefixNC ?? undefined,
         lastCreditNumber: entity.lastCreditNumber ? Number(entity.lastCreditNumber) : undefined,
+        resolutionNCDS: entity.resolutionNCDS ?? undefined,
+        resolutionTextNCDS: entity.resolutionTextNCDS ?? undefined,
+        prefixNCDS: entity.prefixNCDS ?? undefined,
+        lastCreditSupportDocumentNumber: entity.lastCreditSupportDocumentNumber !== undefined
+          ? Number(entity.lastCreditSupportDocumentNumber)
+          : undefined,
         planExpiredAt: entity.planExpiredAt ?? undefined
       }, { removeUndefinedValues: true })
     }
@@ -153,6 +159,12 @@ export class DynamoDBEntityRepository implements EntityRepository {
       resolutionTextNC: item.resolutionTextNC?.S ?? undefined,
       prefixNC: item.prefixNC?.S ?? undefined,
       lastCreditNumber: item.lastCreditNumber?.N ? Number(item.lastCreditNumber.N) : undefined,
+      resolutionNCDS: item.resolutionNCDS?.S ?? undefined,
+      resolutionTextNCDS: item.resolutionTextNCDS?.S ?? undefined,
+      prefixNCDS: item.prefixNCDS?.S ?? undefined,
+      lastCreditSupportDocumentNumber: item.lastCreditSupportDocumentNumber?.N !== undefined
+        ? Number(item.lastCreditSupportDocumentNumber.N)
+        : undefined,
       planExpiredAt: item.planExpiredAt?.S ?? undefined
     }
 
@@ -235,6 +247,12 @@ export class DynamoDBEntityRepository implements EntityRepository {
       resolutionTextNC: item.resolutionTextNC?.S ?? undefined,
       prefixNC: item.prefixNC?.S ?? undefined,
       lastCreditNumber: item.lastCreditNumber?.N ? Number(item.lastCreditNumber.N) : undefined,
+      resolutionNCDS: item.resolutionNCDS?.S ?? undefined,
+      resolutionTextNCDS: item.resolutionTextNCDS?.S ?? undefined,
+      prefixNCDS: item.prefixNCDS?.S ?? undefined,
+      lastCreditSupportDocumentNumber: item.lastCreditSupportDocumentNumber?.N !== undefined
+        ? Number(item.lastCreditSupportDocumentNumber.N)
+        : undefined,
       planExpiredAt: item.planExpiredAt?.S ?? undefined
     }
 
@@ -267,6 +285,12 @@ export class DynamoDBEntityRepository implements EntityRepository {
         resolutionTextNC: entity.resolutionTextNC ?? undefined,
         prefixNC: entity.prefixNC ?? undefined,
         lastCreditNumber: entity.lastCreditNumber ? Number(entity.lastCreditNumber) : undefined,
+        resolutionNCDS: entity.resolutionNCDS ?? undefined,
+        resolutionTextNCDS: entity.resolutionTextNCDS ?? undefined,
+        prefixNCDS: entity.prefixNCDS ?? undefined,
+        lastCreditSupportDocumentNumber: entity.lastCreditSupportDocumentNumber !== undefined
+          ? Number(entity.lastCreditSupportDocumentNumber)
+          : undefined,
         planExpiredAt: entity.planExpiredAt ?? undefined
       })
     }
