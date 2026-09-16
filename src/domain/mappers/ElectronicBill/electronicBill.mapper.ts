@@ -1,6 +1,7 @@
 import path from 'path'
 import * as dotenv from 'dotenv'
 import { ElectronicBill, ElectronicBillPlemsi, Item, ItemPlemsi, Tax, TaxPlemsi } from "../../entities/ElectronicBill.entity";
+import { toPlemsiAmount } from '../../services/utils/money.helper';
 
 dotenv.config({
   path: path.resolve(__dirname, '../../../../.env')
@@ -47,12 +48,12 @@ export function electronicBillPlemsiMapper(bill: ElectronicBill, entityData: Ent
     resolution: entityData.resolution,
     resolutionText: entityData.resolutionText,
     notes: bill.note ?? '',
-    invoiceBaseTotal: Number(bill.total) ?? 0,
-    invoiceTaxExclusiveTotal: Number(bill.total) ?? 0,
-    invoiceTaxInclusiveTotal: Number(bill.totalToPay) ?? 0,
+    invoiceBaseTotal: toPlemsiAmount(bill.total),
+    invoiceTaxExclusiveTotal: toPlemsiAmount(bill.total),
+    invoiceTaxInclusiveTotal: toPlemsiAmount(bill.totalToPay),
     allTaxTotals: taxesPlemsiMapper(bill.taxes),
-    totalToPay: Number(bill.totalToPay) ?? 0,
-    finalTotalToPay: Number(bill.totalToPay) ?? 0
+    totalToPay: toPlemsiAmount(bill.totalToPay),
+    finalTotalToPay: toPlemsiAmount(bill.totalToPay)
   }
 }
 
@@ -62,12 +63,12 @@ export function itemsPlemsiMapper(items: Item[]) : ItemPlemsi[] {
   items.forEach(item => {
     response.push({
       unit_measure_id: Number(item.unitMeasure?.code) ?? 0,
-      line_extension_amount: Number(item.total) ?? 0,
+      line_extension_amount: toPlemsiAmount(item.total),
       free_of_charge_indicator: false,
       description: item.description ?? '',
       code: item.code ?? '',
       type_item_identification_id: Number(item.itemType.code) ?? 0,
-      price_amount: Number(item.price) ?? 0,
+      price_amount: toPlemsiAmount(item.price),
       base_quantity: Number(item.quantity) ?? 0,
       invoiced_quantity: Number(item.quantity) ?? 0,
       tax_totals: taxesPlemsiMapper(item.taxes)
@@ -83,8 +84,8 @@ export function taxesPlemsiMapper(taxes: Tax[]): TaxPlemsi[] {
     response.push({
       tax_id: Number(tax.code) ?? 0,
       percent: Number(tax.percent) ?? 0,
-      tax_amount: Number(tax.taxAmount) ?? 0,
-      taxable_amount: Number(tax.taxableAmount) ?? 0
+      tax_amount: toPlemsiAmount(tax.taxAmount),
+      taxable_amount: toPlemsiAmount(tax.taxableAmount)
     })
   })
 
