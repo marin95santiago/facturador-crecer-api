@@ -59,6 +59,15 @@ const formatCurrency = (amount: number | string): string => {
   return `$ ${num.toLocaleString('es-CO', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 };
 
+/** Builds the product description cell HTML with optional line notes below the name. */
+const buildProductDescriptionCell = (productName: string, lineNotes?: string): string => {
+  let notesHtml = '';
+  if (lineNotes !== undefined && lineNotes.trim() !== '') {
+    notesHtml = `<br/><span style="display: block; font-size: 9px; color: #666; text-align: center;">${lineNotes}</span>`;
+  }
+  return `<strong>${productName}</strong>${notesHtml}`;
+};
+
 // Función para formatear hora
 const formatTime = (timeString: string): string => {
   const [hours, minutes] = timeString.split(':');
@@ -229,11 +238,10 @@ export const generateElectronicInvoiceHTML = async (responseData: any, company: 
     const unitPrice = formatCurrency(line.price_amount || 0);
     const lineTotal = formatCurrency(line.line_extension_amount || 0);
     
-    // Usar el nombre del producto desde invoice_lines.description
     const productName = line.description || 'Producto/Servicio';
+    const lineNotes = line.notes || '';
     const code = line.code || `ITEM-${String(index + 1).padStart(3, '0')}`;
     
-    // Obtener información de impuestos
     const taxInfo = line.tax_totals?.[0];
     const taxAmount = formatCurrency(taxInfo?.tax_amount || 0);
     const taxId = taxInfo?.tax_id;
@@ -243,7 +251,7 @@ export const generateElectronicInvoiceHTML = async (responseData: any, company: 
     return `
       <tr>
         <td>${code}</td>
-        <td><strong>${productName}</strong></td>
+        <td>${buildProductDescriptionCell(productName, lineNotes)}</td>
         <td>UN</td>
         <td>${quantity}</td>
         <td>${unitPrice}</td>
@@ -577,11 +585,10 @@ export const generateElectronicSupportDocumentHTML = async (responseData: any, c
     const unitPrice = formatCurrency(line.price_amount || 0);
     const lineTotal = formatCurrency(line.line_extension_amount || 0);
     
-    // Usar el nombre del producto desde invoice_lines.description
     const productName = line.description || 'Producto/Servicio';
+    const lineNotes = line.notes || '';
     const code = line.code || `ITEM-${String(index + 1).padStart(3, '0')}`;
     
-    // Obtener información de impuestos
     const taxInfo = line.tax_totals?.[0];
     const taxAmount = formatCurrency(taxInfo?.tax_amount || 0);
     const taxId = taxInfo?.tax_id;
@@ -591,7 +598,7 @@ export const generateElectronicSupportDocumentHTML = async (responseData: any, c
     return `
       <tr>
         <td>${code}</td>
-        <td><strong>${productName}</strong></td>
+        <td>${buildProductDescriptionCell(productName, lineNotes)}</td>
         <td>UN</td>
         <td>${quantity}</td>
         <td>${unitPrice}</td>
@@ -956,15 +963,10 @@ export const generateElectronicCreditNoteHTML = async (responseData: any, compan
       taxPercent = `${taxInfo.percent}%`;
     }
 
-    let notesHtml = '';
-    if (lineNotes) {
-      notesHtml = `<br/><span style="font-size: 9px; color: #666;">${lineNotes}</span>`;
-    }
-
     return `
       <tr>
         <td>${code}</td>
-        <td><strong>${productName}</strong>${notesHtml}</td>
+        <td>${buildProductDescriptionCell(productName, lineNotes)}</td>
         <td>UN</td>
         <td>${quantity}</td>
         <td>${unitPrice}</td>
@@ -1417,15 +1419,10 @@ export const generateElectronicCreditNoteSupportDocumentHTML = async (responseDa
       taxPercent = `${taxInfo.percent}%`
     }
 
-    let notesHtml = ''
-    if (lineNotes) {
-      notesHtml = `<br/><span style="font-size: 9px; color: #666;">${lineNotes}</span>`
-    }
-
     productRowParts.push(`
       <tr>
         <td>${code}</td>
-        <td><strong>${productName}</strong>${notesHtml}</td>
+        <td>${buildProductDescriptionCell(productName, lineNotes)}</td>
         <td>UN</td>
         <td>${quantity}</td>
         <td>${unitPrice}</td>

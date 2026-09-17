@@ -170,6 +170,7 @@ export class DynamoDBElectronicBillRepository implements ElectronicBillRepositor
           return {
             code: itemBill.M.code.S ?? '',
             description: itemBill.M.description.S ?? '',
+            detailedDescription: itemBill.M.detailedDescription?.S,
             price: Number(itemBill.M.price.N ?? itemBill.M.price.S) ?? 0,
             quantity: Number(itemBill.M.quantity.S ? itemBill.M.quantity.S : itemBill.M.quantity.N) ?? 0,
             total: Number(itemBill.M.total.N) ?? 0,
@@ -383,6 +384,7 @@ export class DynamoDBElectronicBillRepository implements ElectronicBillRepositor
           return {
             code: itemBill.M.code.S ?? '',
             description: itemBill.M.description.S ?? '',
+            detailedDescription: itemBill.M.detailedDescription?.S,
             price: Number(itemBill.M.price.N ?? itemBill.M.price.S) ?? 0,
             unitMeasure: itemBill.M.unitMeasure.M !== undefined
               ?
