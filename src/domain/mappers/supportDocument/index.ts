@@ -88,7 +88,7 @@ export function itemsPlemsiMapper(items: Item[], date: string) : ItemPlemsi[] {
   let response : ItemPlemsi[] = []
 
   items.forEach(item => {
-    response.push({
+    const plemsiItem: ItemPlemsi = {
       unit_measure_id: Number(item.unitMeasure?.code) ?? 0,
       line_extension_amount: toPlemsiAmount(item.total),
       free_of_charge_indicator: false,
@@ -103,7 +103,14 @@ export function itemsPlemsiMapper(items: Item[], date: string) : ItemPlemsi[] {
       modelname: 'NA',
       start_date: date,
       type_generation_transmition_id: 1
-    })
+    }
+
+    const detailedDescription = item.detailedDescription?.trim()
+    if (detailedDescription !== undefined && detailedDescription !== '') {
+      plemsiItem.notes = detailedDescription
+    }
+
+    response.push(plemsiItem)
   })
 
   return response

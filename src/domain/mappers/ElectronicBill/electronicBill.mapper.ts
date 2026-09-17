@@ -61,7 +61,7 @@ export function itemsPlemsiMapper(items: Item[]) : ItemPlemsi[] {
   let response : ItemPlemsi[] = []
 
   items.forEach(item => {
-    response.push({
+    const plemsiItem: ItemPlemsi = {
       unit_measure_id: Number(item.unitMeasure?.code) ?? 0,
       line_extension_amount: toPlemsiAmount(item.total),
       free_of_charge_indicator: false,
@@ -72,7 +72,14 @@ export function itemsPlemsiMapper(items: Item[]) : ItemPlemsi[] {
       base_quantity: Number(item.quantity) ?? 0,
       invoiced_quantity: Number(item.quantity) ?? 0,
       tax_totals: taxesPlemsiMapper(item.taxes)
-    })
+    }
+
+    const detailedDescription = item.detailedDescription?.trim()
+    if (detailedDescription !== undefined && detailedDescription !== '') {
+      plemsiItem.notes = detailedDescription
+    }
+
+    response.push(plemsiItem)
   })
 
   return response

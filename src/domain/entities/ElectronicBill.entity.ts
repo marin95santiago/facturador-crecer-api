@@ -26,6 +26,7 @@ export interface ItemPlemsi {
   base_quantity: number
   invoiced_quantity: number
   tax_totals: TaxPlemsi[]
+  notes?: string
   brandname?: string
   modelname?: string
   start_date?: string
@@ -35,6 +36,7 @@ export interface ItemPlemsi {
 export interface Item {
   unitMeasure?: { code: number, description: string }
   description?: string
+  detailedDescription?: string
   code?: string
   itemType: {
     code: string
