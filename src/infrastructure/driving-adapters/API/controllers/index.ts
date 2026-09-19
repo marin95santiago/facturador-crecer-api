@@ -3,6 +3,9 @@ import { getAllUsers } from './user/getAllUsers.controller'
 import { getUserById } from './user/getUserById.controller'
 import { updateUser } from './user/updateUser.controller'
 import { deleteUser } from './user/deleteUser.controller'
+import { setUserPassword } from './user/setUserPassword.controller'
+import { requestPasswordChange } from './user/requestPasswordChange.controller'
+import { forgotPassword } from './user/forgotPassword.controller'
 
 // Entities
 import { createEntity } from './entity/createEntity.controller'
@@ -55,6 +58,9 @@ export {
   getUserById as getUserByIdController,
   updateUser as updateUserController,
   deleteUser as deleteUserController,
+  setUserPassword as setUserPasswordController,
+  requestPasswordChange as requestPasswordChangeController,
+  forgotPassword as forgotPasswordController,
   createEntity as createEntityController,
   getAllEntities as getAllEntitiesController,
   getEntityById as getEntityByIdController,
