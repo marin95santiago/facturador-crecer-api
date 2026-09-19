@@ -21,6 +21,12 @@ import { ControlUserBlockedException } from '../../../../domain/exceptions/user/
 import { ControlCodeExpiredException } from '../../../../domain/exceptions/user/ControlCodeExpired.exception'
 import { WrongControlCodeException } from '../../../../domain/exceptions/user/WrongControlCode.exception'
 import { UserNotControlUserException } from '../../../../domain/exceptions/user/UserNotControlUser.exception'
+import { InvalidPasswordSetupTokenException } from '../../../../domain/exceptions/user/InvalidPasswordSetupToken.exception'
+import { ExpiredPasswordSetupTokenException } from '../../../../domain/exceptions/user/ExpiredPasswordSetupToken.exception'
+import { PasswordNotSetException } from '../../../../domain/exceptions/user/PasswordNotSet.exception'
+import { PasswordRequiredException } from '../../../../domain/exceptions/user/PasswordRequired.exception'
+import { EmailSendFailedException } from '../../../../domain/exceptions/user/EmailSendFailed.exception'
+import { TooManyForgotPasswordAttemptsException } from '../../../../domain/exceptions/user/TooManyForgotPasswordAttempts.exception'
 
 const route = Router()
 
@@ -86,6 +92,30 @@ route.use((err: Error, req: Request, res: Response, next: NextFunction) => {
     })
   } else if (err instanceof UserNotControlUserException) {
     res.status(400).json({
+      message: err.message
+    })
+  } else if (err instanceof InvalidPasswordSetupTokenException) {
+    res.status(400).json({
+      message: err.message
+    })
+  } else if (err instanceof ExpiredPasswordSetupTokenException) {
+    res.status(400).json({
+      message: err.message
+    })
+  } else if (err instanceof PasswordNotSetException) {
+    res.status(400).json({
+      message: err.message
+    })
+  } else if (err instanceof PasswordRequiredException) {
+    res.status(400).json({
+      message: err.message
+    })
+  } else if (err instanceof EmailSendFailedException) {
+    res.status(500).json({
+      message: err.message
+    })
+  } else if (err instanceof TooManyForgotPasswordAttemptsException) {
+    res.status(429).json({
       message: err.message
     })
   } else {

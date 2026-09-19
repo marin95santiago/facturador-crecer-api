@@ -5,8 +5,8 @@ import { GetEntityByIdService } from '../../../domain/services/entity/GetEntityB
 import { UserRepository } from '../../../domain/repositories/User.repository'
 import { EntityRepository } from '../../../domain/repositories/Entity.repository'
 import { UserNotFoundException } from '../../../domain/exceptions/user/UserNotFound.exception'
-import { UnhandledException } from '../../../domain/exceptions/common/Unhandled.exception'
 import { LoginWrongPasswordException } from '../../../domain/exceptions/user/LoginWrongPassword.exception'
+import { PasswordNotSetException } from '../../../domain/exceptions/user/PasswordNotSet.exception'
 
 export class LoginUseCase {
   private readonly _getUserByEmailService: GetUserByEmailService
@@ -17,25 +17,24 @@ export class LoginUseCase {
     this._getEntityByIdService = new GetEntityByIdService(entityRepository)
   }
 
+  /** Authenticates a user by email and password and returns a session JWT. */
   async run (email: string, password: string, secret: string): Promise<{ token: string }> {
-    // validation for user and password
     const userToLogin = await this._getUserByEmailService.run(email)
 
     if (userToLogin === null) throw new UserNotFoundException()
 
-    if (userToLogin.password === undefined) throw new UnhandledException('Login 1')
+    if (userToLogin.password === undefined || userToLogin.password === '') {
+      throw new PasswordNotSetException()
+    }
 
     const match = await bcrypt.compare(password, userToLogin.password)
 
     if (!match) throw new LoginWrongPasswordException()
 
-    // call entity information
     const entity = await this._getEntityByIdService.run(userToLogin.entityId)
-    
-    // protect password
+
     delete userToLogin.password
 
-    // Generate token
     const token = jwt.sign({
       exp: Math.floor(Date.now() / 1000) + (120 * 60),
       data: {
