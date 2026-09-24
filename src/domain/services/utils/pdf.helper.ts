@@ -1,5 +1,6 @@
 import { Entity as Company } from '../../../domain/entities/Entity.entity';
 import QRCode from 'qrcode';
+import { formatDocumentDate } from './date.helper';
 
 const PREFIX_SUPPORT_DOCUMENT_PLEMSI = process.env.PREFIX_SUPPORT_DOCUMENT_PLEMSI || 'DS';
 
@@ -43,14 +44,9 @@ const numberToWords = (num: number): string => {
   return 'número muy grande';
 };
 
-// Función para formatear fecha
+/** Formats a document date for PDF display using the configured app timezone. */
 const formatDate = (dateString: string): string => {
-  const date = new Date(dateString);
-  const months = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
-  const day = date.getDate().toString().padStart(2, '0');
-  const month = months[date.getMonth()];
-  const year = date.getFullYear();
-  return `${day}-${month}-${year}`;
+  return formatDocumentDate(dateString);
 };
 
 // Función para formatear moneda

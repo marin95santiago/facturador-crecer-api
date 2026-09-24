@@ -3,6 +3,7 @@ import * as dotenv from 'dotenv'
 import { Item, ItemPlemsi, Tax, TaxPlemsi } from "../../entities/ElectronicBill.entity";
 import { SupportDocumentPlemsi } from 'domain/entities/SupportDocument.entity';
 import { toPlemsiAmount } from '../../services/utils/money.helper';
+import { getCurrentTimeInAppTimezone } from '../../services/utils/date.helper';
 
 dotenv.config({
   path: path.resolve(__dirname, '../../../../.env')
@@ -46,7 +47,7 @@ function calcularDigitoVerificacion(cedula: string): number {
 export function supportDocumentPlemsiMapper(bill: any, entityData: EntityDataForPlemsi): SupportDocumentPlemsi {
   return {
     date: bill.date ?? '',
-    time: "12:21:00",
+    time: getCurrentTimeInAppTimezone(),
     prefix: prefixPlemsi,
     number: bill.number ?? 0,
     seller: {
