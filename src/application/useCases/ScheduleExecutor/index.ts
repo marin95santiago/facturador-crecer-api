@@ -2,6 +2,11 @@ import { ElectronicBillRepository } from 'domain/repositories/ElectronicBill.rep
 import { ScheduleRepository } from '../../../domain/repositories/Schedule.repository'
 import { ElectronicBillCreatorUseCase } from '../ElectronicBillCreator'
 import { EntityRepository } from 'domain/repositories/Entity.repository'
+import {
+  getCurrentDateInAppTimezone,
+  getDayAndMonthFromCalendarDate,
+  getDayOfWeekFromCalendarDate
+} from '../../../domain/services/utils/date.helper'
 export class ScheduleExecutorUseCase {
   private readonly _scheduleRepository: ScheduleRepository
   private readonly _electronicBillRepository: ElectronicBillRepository
@@ -95,9 +100,7 @@ export class ScheduleExecutorUseCase {
     const currentDate = this.getCurrentDate('AAAA-MM-DD')
     
     if (endDate) {
-      const currentDatePoc = new Date()
-      const endDatePoc = new Date(endDate)
-      if (endDatePoc <= currentDatePoc) {
+      if (endDate <= currentDate) {
         response.requireAction = this.DELETE_SCHEDULE
         return response
       }
@@ -111,14 +114,14 @@ export class ScheduleExecutorUseCase {
   
     switch (interval) {
       case 'weekly':
-        const dayForStartDate = this.getDayOfWeek(startDate)
-        const dayForCurrentDate = this.getDayOfWeek(currentDate) 
+        const dayForStartDate = getDayOfWeekFromCalendarDate(startDate)
+        const dayForCurrentDate = getDayOfWeekFromCalendarDate(currentDate)
         response.generateBill = (dayForStartDate === dayForCurrentDate)
         break
   
       case 'monthly':
-        const dayMontStartDate = this.getDayAndMont(startDate)
-        const dayMontCurrentDate = this.getDayAndMont(currentDate)
+        const dayMontStartDate = getDayAndMonthFromCalendarDate(startDate)
+        const dayMontCurrentDate = getDayAndMonthFromCalendarDate(currentDate)
   
         response.generateBill = (dayMontStartDate.day === dayMontCurrentDate.day && dayMontStartDate.month !== dayMontCurrentDate.month)
         break
@@ -131,45 +134,10 @@ export class ScheduleExecutorUseCase {
   }
 
   getCurrentDate(format: 'AAAA-MM-DD' | 'AAAA/MM/DD'): string {
-    const currentDate = new Date()
-    const year = currentDate.getFullYear()
-    const month = String(currentDate.getMonth() + 1).padStart(2, '0')
-    const day = String(currentDate.getDate()).padStart(2, '0')
-  
-    let response = ''
-  
-    switch (format) {
-      case 'AAAA-MM-DD':
-        response = `${year}-${month}-${day}`
-        break
-  
-      case 'AAAA/MM/DD':
-        response = `${year}/${month}/${day}`
-        break
-    
-      default:
-        break
+    if (format === 'AAAA/MM/DD') {
+      return getCurrentDateInAppTimezone('YYYY/MM/DD')
     }
-  
-    return response
-  }
-  
-  getDayOfWeek(formatedDate: string) {
-    const date = new Date(formatedDate)
-    const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-    const dayIndex = date.getDay()
 
-    return daysOfWeek[dayIndex]
-  }
-  
-  getDayAndMont(formatedDate: string) {
-    const date = new Date(formatedDate)
-    const day = String(date.getDate()).padStart(2, '0')
-    const month = String(date.getMonth() + 1).padStart(2, '0')
-    
-    return {
-      day,
-      month
-    }
+    return getCurrentDateInAppTimezone('YYYY-MM-DD')
   }
 }

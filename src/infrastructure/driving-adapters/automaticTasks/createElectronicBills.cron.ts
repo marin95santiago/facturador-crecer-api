@@ -4,6 +4,7 @@ import { DynamoDBEntityRepository } from '../../../infrastructure/implementation
 import { DynamoDBScheduleRepository } from '../../../infrastructure/implementations/AWS/dynamoDB/DynamoDBScheduleRepository'
 import { DynamoDBElectronicBillRepository } from '../../../infrastructure/implementations/AWS/dynamoDB/DynamoDBElectronicBillRepository'
 import { ScheduleExecutorUseCase } from '../../../application/useCases/ScheduleExecutor'
+import { getAppTimezone } from '../../../domain/services/utils/date.helper'
 
 // Define the task to be executed
 const task = cron.schedule('00 02 * * *', async () => {
@@ -11,7 +12,7 @@ const task = cron.schedule('00 02 * * *', async () => {
   await handler()
 }, {
   scheduled: true,
-  timezone: "America/Bogota"
+  timezone: getAppTimezone()
 })
 
 
@@ -44,4 +45,4 @@ async function handler() {
 // Start the cron job
 task.start()
 
-console.log('Cron job for scheduled bills is runing every day at 2 AM in the timezone America/Bogota')
+console.log(`Cron job for scheduled bills is runing every day at 2 AM in the timezone ${getAppTimezone()}`)

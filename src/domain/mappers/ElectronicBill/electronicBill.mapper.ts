@@ -2,6 +2,7 @@ import path from 'path'
 import * as dotenv from 'dotenv'
 import { ElectronicBill, ElectronicBillPlemsi, Item, ItemPlemsi, Tax, TaxPlemsi } from "../../entities/ElectronicBill.entity";
 import { toPlemsiAmount } from '../../services/utils/money.helper';
+import { getCurrentTimeInAppTimezone } from '../../services/utils/date.helper';
 
 dotenv.config({
   path: path.resolve(__dirname, '../../../../.env')
@@ -18,7 +19,7 @@ interface EntityDataForPlemsi {
 export function electronicBillPlemsiMapper(bill: ElectronicBill, entityData: EntityDataForPlemsi): ElectronicBillPlemsi {
   return {
     date: bill.date ?? '',
-    time: "12:21:00",
+    time: getCurrentTimeInAppTimezone(),
     prefix: entityData.prefix ?? prefixPlemsi,
     number: bill.number ?? 0,
     orderReference: {
