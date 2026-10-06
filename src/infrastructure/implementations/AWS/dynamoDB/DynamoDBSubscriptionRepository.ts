@@ -37,7 +37,7 @@ export class DynamoDBSubscriptionRepository implements SubscriptionRepository {
       transactItems.push({
         Update: {
           TableName: this._tableName,
-          Key: marshall({ id: previousId }),
+          Key: marshall({ id: previousId, entityId: subscription.entityId }),
           UpdateExpression: 'SET active = :inactive',
           ConditionExpression: 'active = :active',
           ExpressionAttributeValues: marshall({
@@ -163,11 +163,15 @@ export class DynamoDBSubscriptionRepository implements SubscriptionRepository {
   }
 
   /** Adds one accepted document to an active subscription. */
-  async incrementCurrentDocuments (id: string): Promise<void> {
+  async incrementCurrentDocuments (id: string, entityId: string): Promise<void> {
+    const itemKey = marshall({ id, entityId })
+    // #region agent log
+    fetch('http://127.0.0.1:7681/ingest/94cb4c4d-d60a-471e-a1c1-d82286125dd6',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'bbda89'},body:JSON.stringify({sessionId:'bbda89',runId:'post-fix',hypothesisId:'A',location:'DynamoDBSubscriptionRepository.ts:incrementCurrentDocuments',message:'UpdateItem key before send',data:{tableName:this._tableName,subscriptionId:id,entityId,itemKey},timestamp:Date.now()})}).catch(()=>{});
+    // #endregion
     try {
       await this.client.send(new UpdateItemCommand({
         TableName: this._tableName,
-        Key: marshall({ id }),
+        Key: itemKey,
         UpdateExpression: 'ADD currentDocuments :increment',
         ConditionExpression: 'active = :active',
         ExpressionAttributeValues: marshall({
@@ -175,6 +179,9 @@ export class DynamoDBSubscriptionRepository implements SubscriptionRepository {
           ':active': true
         })
       }))
+      // #region agent log
+      fetch('http://127.0.0.1:7681/ingest/94cb4c4d-d60a-471e-a1c1-d82286125dd6',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'bbda89'},body:JSON.stringify({sessionId:'bbda89',runId:'post-fix',hypothesisId:'A',location:'DynamoDBSubscriptionRepository.ts:incrementCurrentDocuments',message:'UpdateItem succeeded',data:{subscriptionId:id,entityId},timestamp:Date.now()})}).catch(()=>{});
+      // #endregion
     } catch (error) {
       let subscriptionAlreadyInactive = false
       if (error instanceof Error && error.name === 'ConditionalCheckFailedException') {

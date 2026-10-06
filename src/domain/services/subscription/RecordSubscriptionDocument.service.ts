@@ -37,6 +37,9 @@ export class RecordSubscriptionDocumentService {
       console.warn('Multiple active subscriptions found for entity', { entityId, subscriptionIds })
     }
 
-    await this._subscriptionRepository.incrementCurrentDocuments(selectedSubscription.id)
+    // #region agent log
+    fetch('http://127.0.0.1:7681/ingest/94cb4c4d-d60a-471e-a1c1-d82286125dd6',{method:'POST',headers:{'Content-Type':'application/json','X-Debug-Session-Id':'bbda89'},body:JSON.stringify({sessionId:'bbda89',runId:'post-fix',hypothesisId:'A',location:'RecordSubscriptionDocument.service.ts:run',message:'Incrementing subscription counter',data:{entityId,subscriptionId:selectedSubscription.id,subscriptionEntityId:selectedSubscription.entityId},timestamp:Date.now()})}).catch(()=>{});
+    // #endregion
+    await this._subscriptionRepository.incrementCurrentDocuments(selectedSubscription.id, selectedSubscription.entityId)
   }
 }

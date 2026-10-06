@@ -8,5 +8,5 @@ export interface SubscriptionRepository {
   /** Lists every subscription of an entity through the entity index. */
   getByEntityId: (entityId: string) => Promise<Subscription[]>
   /** Adds one accepted document to an active subscription. */
-  incrementCurrentDocuments: (id: string) => Promise<void>
+  incrementCurrentDocuments: (id: string, entityId: string) => Promise<void>
 }
