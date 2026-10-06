@@ -1,5 +1,6 @@
 import { ElectronicBillRepository } from 'domain/repositories/ElectronicBill.repository'
 import { ScheduleRepository } from '../../../domain/repositories/Schedule.repository'
+import { SubscriptionRepository } from '../../../domain/repositories/Subscription.repository'
 import { ElectronicBillCreatorUseCase } from '../ElectronicBillCreator'
 import { EntityRepository } from 'domain/repositories/Entity.repository'
 import {
@@ -13,10 +14,10 @@ export class ScheduleExecutorUseCase {
   private readonly _electronicBillCreatorUseCase:  ElectronicBillCreatorUseCase
   private DELETE_SCHEDULE = 'DELETE_SCHEDULE'
 
-  constructor (scheduleRepository: ScheduleRepository, electronicBillRepository: ElectronicBillRepository, entityRepository: EntityRepository) {
+  constructor (scheduleRepository: ScheduleRepository, electronicBillRepository: ElectronicBillRepository, entityRepository: EntityRepository, subscriptionRepository: SubscriptionRepository) {
     this._scheduleRepository = scheduleRepository
     this._electronicBillRepository = electronicBillRepository
-    this._electronicBillCreatorUseCase = new ElectronicBillCreatorUseCase(electronicBillRepository, entityRepository)
+    this._electronicBillCreatorUseCase = new ElectronicBillCreatorUseCase(electronicBillRepository, entityRepository, subscriptionRepository)
   }
 
   async run (): Promise<any[]> {

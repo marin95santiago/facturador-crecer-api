@@ -2,6 +2,7 @@ import { NextFunction, Request, Response } from 'express'
 import { DynamoDBElectronicBillRepository } from '../../../../implementations/AWS/dynamoDB/DynamoDBElectronicBillRepository'
 import { DynamoDBEntityRepository } from '../../../../implementations/AWS/dynamoDB/DynamoDBEntityRepository'
 import { DynamoDBScheduleRepository } from '../../../../implementations/AWS/dynamoDB/DynamoDBScheduleRepository'
+import { DynamoDBSubscriptionRepository } from '../../../../implementations/AWS/dynamoDB/DynamoDBSubscriptionRepository'
 import { ElectronicBillCreatorUseCase  } from '../../../../../application/useCases/ElectronicBillCreator'
 import { validatePermission } from '../../utils'
 import permissionsList from '../../permission.json'
@@ -32,7 +33,7 @@ export const createElectronicBill = async (req: Request, res: Response, next: Ne
   const dynamoDBElectronicBillRepository = new DynamoDBElectronicBillRepository()
   const dynamoDBEntityRepository = new DynamoDBEntityRepository()
   const dynamoDBScheduleRepository = new DynamoDBScheduleRepository()
-  const electronicBillCreatorUseCase = new ElectronicBillCreatorUseCase (dynamoDBElectronicBillRepository, dynamoDBEntityRepository)
+  const electronicBillCreatorUseCase = new ElectronicBillCreatorUseCase (dynamoDBElectronicBillRepository, dynamoDBEntityRepository, new DynamoDBSubscriptionRepository())
   const scheduleCreator = new ScheduleCreatorUseCase(dynamoDBScheduleRepository)
 
   try {

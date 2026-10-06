@@ -1,5 +1,7 @@
 import { PlemsiDocumentService } from '../../../domain/services/electronicBill/PlemsiDocument.service'
+import { RecordSubscriptionDocumentService } from '../../../domain/services/subscription/RecordSubscriptionDocument.service'
 import { DynamoDBEntityRepository } from '../../../infrastructure/implementations/AWS/dynamoDB/DynamoDBEntityRepository'
+import { DynamoDBSubscriptionRepository } from '../../../infrastructure/implementations/AWS/dynamoDB/DynamoDBSubscriptionRepository'
 import { UnhandledException } from '../../../domain/exceptions/common/Unhandled.exception'
 
 const PLEMSI_ERROR_BILL_STILL_PENDING_EMIT_CODE = process.env.PLEMSI_ERROR_BILL_STILL_PENDING_EMIT_CODE || ''
@@ -51,6 +53,13 @@ export class SupportDocumentCreditNotePresenterUseCase {
       ...entity,
       lastCreditSupportDocumentNumber: creditNoteNumber
     })
+
+    try {
+      const recordSubscriptionDocumentService = new RecordSubscriptionDocumentService(new DynamoDBSubscriptionRepository())
+      await recordSubscriptionDocumentService.run(entityId)
+    } catch (error) {
+      console.error('Failed to record subscription document', { entityId, error })
+    }
 
     return creditNoteResponse
   }

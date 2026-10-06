@@ -2,9 +2,11 @@ import path from 'path'
 import * as dotenv from 'dotenv'
 import { ElectronicBillRepository } from '../../../domain/repositories/ElectronicBill.repository'
 import { EntityRepository } from '../../../domain/repositories/Entity.repository'
+import { SubscriptionRepository } from '../../../domain/repositories/Subscription.repository'
 import { ElectronicBill } from '../../../domain/entities/ElectronicBill.entity'
 import { BillPlemsiService } from '../../../domain/services/electronicBill/BillPlemsi.service'
 import { GetEntityByIdService } from '../../../domain/services/entity/GetEntityById.service'
+import { RecordSubscriptionDocumentService } from '../../../domain/services/subscription/RecordSubscriptionDocument.service'
 import { UnhandledException } from '../../../domain/exceptions/common/Unhandled.exception'
 import { electronicBillPlemsiMapper } from '../../../domain/mappers/ElectronicBill/electronicBill.mapper'
 
@@ -19,14 +21,17 @@ export class ElectronicBillCreatorUseCase {
   private readonly _entityRepository: EntityRepository
   private readonly _billPlemsiService: BillPlemsiService
   private readonly _getEntityByIdService: GetEntityByIdService
+  private readonly _recordSubscriptionDocumentService: RecordSubscriptionDocumentService
 
-  constructor (electronicBillRepository: ElectronicBillRepository, entityRepository: EntityRepository) {
+  constructor (electronicBillRepository: ElectronicBillRepository, entityRepository: EntityRepository, subscriptionRepository: SubscriptionRepository) {
     this._electronicBillRepository = electronicBillRepository
     this._entityRepository = entityRepository
     this._billPlemsiService = new BillPlemsiService()
     this._getEntityByIdService = new GetEntityByIdService(entityRepository)
+    this._recordSubscriptionDocumentService = new RecordSubscriptionDocumentService(subscriptionRepository)
   }
 
+  /** Creates an electronic bill in Plemsi and stores it when the emission is accepted. */
   async run (bill: ElectronicBill): Promise<{ data: ElectronicBill, entityInformation: { apikey: string, number: number }}> {
     try {
       const entity = await this._getEntityByIdService.run(bill.entityId || '')
@@ -60,6 +65,12 @@ export class ElectronicBillCreatorUseCase {
               lastElectronicBillNumber: number
             })
           ])
+
+          try {
+            await this._recordSubscriptionDocumentService.run(entity.id)
+          } catch (error) {
+            console.error('Failed to record subscription document', { entityId: entity.id, error })
+          }
 
           return { data: bill, entityInformation: { apikey: entity.apiKeyPlemsi ?? '', number: number }}
         } else {

@@ -1,5 +1,7 @@
 import { PlemsiDocumentService } from '../../../domain/services/electronicBill/PlemsiDocument.service'
+import { RecordSubscriptionDocumentService } from '../../../domain/services/subscription/RecordSubscriptionDocument.service'
 import { DynamoDBEntityRepository } from '../../../infrastructure/implementations/AWS/dynamoDB/DynamoDBEntityRepository'
+import { DynamoDBSubscriptionRepository } from '../../../infrastructure/implementations/AWS/dynamoDB/DynamoDBSubscriptionRepository'
 import { UnhandledException } from '../../../domain/exceptions/common/Unhandled.exception'
 
 /**
@@ -46,6 +48,13 @@ export class ElectronicBillCreditNotePresenterUseCase {
       ...entity,
       lastCreditNumber: entity.lastCreditNumber ? entity.lastCreditNumber + 1 : 1
     })
+
+    try {
+      const recordSubscriptionDocumentService = new RecordSubscriptionDocumentService(new DynamoDBSubscriptionRepository())
+      await recordSubscriptionDocumentService.run(entityId)
+    } catch (error) {
+      console.error('Failed to record subscription document', { entityId, error })
+    }
 
     return creditNoteData
   }

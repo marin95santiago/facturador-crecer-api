@@ -3,6 +3,7 @@ import fs from 'fs'
 import { DynamoDBEntityRepository } from '../../../infrastructure/implementations/AWS/dynamoDB/DynamoDBEntityRepository'
 import { DynamoDBScheduleRepository } from '../../../infrastructure/implementations/AWS/dynamoDB/DynamoDBScheduleRepository'
 import { DynamoDBElectronicBillRepository } from '../../../infrastructure/implementations/AWS/dynamoDB/DynamoDBElectronicBillRepository'
+import { DynamoDBSubscriptionRepository } from '../../../infrastructure/implementations/AWS/dynamoDB/DynamoDBSubscriptionRepository'
 import { ScheduleExecutorUseCase } from '../../../application/useCases/ScheduleExecutor'
 import { getAppTimezone } from '../../../domain/services/utils/date.helper'
 
@@ -20,7 +21,8 @@ async function handler() {
   const dynamoDBScheduleRepository = new DynamoDBScheduleRepository()
   const dynamoDBElectronicBillRepository = new DynamoDBElectronicBillRepository()
   const dynamoDBEntityRepository = new DynamoDBEntityRepository()
-  const scheduleExecutorUseCase = new ScheduleExecutorUseCase(dynamoDBScheduleRepository, dynamoDBElectronicBillRepository, dynamoDBEntityRepository)
+  const dynamoDBSubscriptionRepository = new DynamoDBSubscriptionRepository()
+  const scheduleExecutorUseCase = new ScheduleExecutorUseCase(dynamoDBScheduleRepository, dynamoDBElectronicBillRepository, dynamoDBEntityRepository, dynamoDBSubscriptionRepository)
 
   try {
     const actions = await scheduleExecutorUseCase.run()

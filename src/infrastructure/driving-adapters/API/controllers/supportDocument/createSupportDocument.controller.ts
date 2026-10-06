@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from 'express'
 import { DynamoDBEntityRepository } from '../../../../implementations/AWS/dynamoDB/DynamoDBEntityRepository'
+import { DynamoDBSubscriptionRepository } from '../../../../implementations/AWS/dynamoDB/DynamoDBSubscriptionRepository'
 import { validatePermission } from '../../utils'
 import permissionsList from '../../permission.json'
 import { PermissionNotAvailableException } from '../../../../../domain/exceptions/common/PermissionNotAvailable.exception'
@@ -9,7 +10,7 @@ export const createSupportDocument = async (req: Request, res: Response, next: N
   const { sessionUser } = req.params
 
   const dynamoDBEntityRepository = new DynamoDBEntityRepository()
-  const electronicBillCreatorUseCase = new SupportDocumentCreatorUseCase (dynamoDBEntityRepository)
+  const electronicBillCreatorUseCase = new SupportDocumentCreatorUseCase (dynamoDBEntityRepository, new DynamoDBSubscriptionRepository())
 
   try {
     const session = JSON.parse(sessionUser)
