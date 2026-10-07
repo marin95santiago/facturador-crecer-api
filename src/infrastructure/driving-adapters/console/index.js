@@ -63,6 +63,53 @@ const contables_seminario = [
   }
 ]
 
+const contables_colegios = [
+  {
+    idItem: '01',
+    cuenta_contable: '4160050100'
+  },
+  {
+    idItem: '02',
+    cuenta_contable: '4160050100'
+  },
+  {
+    idItem: '03',
+    cuenta_contable: '4160050500'
+  },
+  {
+    idItem: '04',
+    cuenta_contable: '4160050100'
+  },
+  {
+    idItem: '05',
+    cuenta_contable: '4160050100'
+  },
+  {
+    idItem: '06',
+    cuenta_contable: '4160050100'
+  },
+  {
+    idItem: '07',
+    cuenta_contable: '4160050100'
+  },
+  {
+    idItem: '08',
+    cuenta_contable: '4160050100'
+  },
+  {
+    idItem: '09',
+    cuenta_contable: '4160050500'
+  },
+  {
+    idItem: '10',
+    cuenta_contable: '4160050500'
+  },
+  {
+    idItem: '11',
+    cuenta_contable: '4160050400'
+  }
+]
+
 const cuenta_contable_col = '1615050100'
 
 async function generateData(dataS) {
@@ -86,7 +133,7 @@ async function generateData(dataS) {
       let cuentaContable;
 
       // Cuando quiera exportar seminarios, usar contables de seminario, caso de colegios usar contables.
-      cuentaContable = contables.find(contable => contable.idItem === item.code)
+      cuentaContable = contables_colegios.find(contable => contable.idItem === item.code)
 
       registerC = {
         numero_documento: bill.number,

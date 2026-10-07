@@ -1,5 +1,13 @@
+import crypto from 'crypto'
 import jwt from 'jsonwebtoken'
 import { AuthTokenRepository } from '../../../domain/repositories/AuthToken.repository'
+import { RefreshTokenRepository } from '../../../domain/repositories/RefreshToken.repository'
+import {
+  accessTokenExpUnix,
+  generateRefreshTokenValue,
+  hashRefreshToken,
+  refreshTokenExpiresAtUnix
+} from '../../../infrastructure/driving-adapters/API/controllers/login/refreshToken.helper'
 import { GetUserByEmailService } from '../../../domain/services/user/GetUserByEmail.service'
 import { GetEntityByIdService } from '../../../domain/services/entity/GetEntityById.service'
 import { UserRepository } from '../../../domain/repositories/User.repository'
@@ -18,13 +26,15 @@ export class VerifyControlCodeUseCase {
     private readonly _userRepository: UserRepository,
     private readonly _entityRepository: EntityRepository,
     private readonly _authTokenRepository: AuthTokenRepository,
+    private readonly _refreshTokenRepository: RefreshTokenRepository,
     private readonly _secret: string
   ) {
     this._getUserByEmailService = new GetUserByEmailService(_userRepository)
     this._getEntityByIdService = new GetEntityByIdService(_entityRepository)
   }
 
-  async run (email: string, code: string, clientIp: string): Promise<{ token: string }> {
+  /** Validates the control code and returns a session JWT plus refresh cookie value. */
+  async run (email: string, code: string, clientIp: string): Promise<{ token: string, refreshToken: string }> {
     const emailLower = email.trim().toLowerCase()
     const codeTrim = code.trim().toUpperCase()
     const now = Date.now()
@@ -66,13 +76,28 @@ export class VerifyControlCodeUseCase {
     delete (user as { password?: string }).password
 
     const token = jwt.sign({
-      exp: Math.floor(Date.now() / 1000) + (120 * 60),
+      exp: accessTokenExpUnix(),
       data: {
         user,
         entity: entity ?? undefined
       }
     }, this._secret)
 
-    return { token }
+    const rawRefreshToken = generateRefreshTokenValue()
+    const tokenHash = hashRefreshToken(rawRefreshToken)
+    const familyId = crypto.randomUUID()
+    const nowUnix = Math.floor(Date.now() / 1000)
+    const expiresAt = refreshTokenExpiresAtUnix()
+
+    await this._refreshTokenRepository.saveNew({
+      tokenHash,
+      familyId,
+      userId: user.id,
+      expiresAt,
+      createdAt: nowUnix,
+      ttl: expiresAt
+    })
+
+    return { token, refreshToken: rawRefreshToken }
   }
 }

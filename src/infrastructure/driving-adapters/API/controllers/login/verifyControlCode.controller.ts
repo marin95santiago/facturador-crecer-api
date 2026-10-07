@@ -3,6 +3,8 @@ import { DynamoDBUserRepository } from '../../../../implementations/AWS/dynamoDB
 import { DynamoDBEntityRepository } from '../../../../implementations/AWS/dynamoDB/DynamoDBEntityRepository'
 import { DynamoDBAuthTokenRepository } from '../../../../implementations/AWS/dynamoDB/DynamoDBAuthTokenRepository'
 import { VerifyControlCodeUseCase } from '../../../../../application/useCases/VerifyControlCode'
+import { DynamoDBRefreshTokenRepository } from '../../../../implementations/AWS/dynamoDB/DynamoDBRefreshTokenRepository'
+import { setRefreshTokenCookie } from './refreshToken.helper'
 
 const SECRET = process.env.SECRET ?? ''
 
@@ -13,11 +15,13 @@ export const verifyControlCode = async (req: Request, res: Response, next: NextF
   const userRepo = new DynamoDBUserRepository()
   const entityRepo = new DynamoDBEntityRepository()
   const authTokenRepo = new DynamoDBAuthTokenRepository()
-  const useCase = new VerifyControlCodeUseCase(userRepo, entityRepo, authTokenRepo, SECRET)
+  const refreshTokenRepo = new DynamoDBRefreshTokenRepository()
+  const useCase = new VerifyControlCodeUseCase(userRepo, entityRepo, authTokenRepo, refreshTokenRepo, SECRET)
 
   try {
     const result = await useCase.run(email, code, clientIp)
-    res.json(result)
+    setRefreshTokenCookie(res, result.refreshToken)
+    res.json({ token: result.token })
   } catch (error) {
     return next(error)
   }
