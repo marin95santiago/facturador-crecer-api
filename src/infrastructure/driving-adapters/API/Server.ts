@@ -14,7 +14,8 @@ export class Server {
     this._port = port
     this._app = express()
     this._corsOptions = {
-      origin: process.env.FRONT_URL ?? 'http://localhost:3000'
+      origin: process.env.FRONT_URL ?? 'http://localhost:3000',
+      credentials: true
     }
     this._app.use(express.json())
     this._app.use(express.urlencoded({ extended: false }))

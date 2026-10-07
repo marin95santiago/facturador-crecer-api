@@ -1,0 +1,4921 @@
+[
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1235",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=4d0c9e1de3fa6c6037f9476a8bfb04c8669bf72899b4b5584dbdc1acc7d7371b7fad817d5fa187daaffdba86ad4fe4be",
+            "date": "2026-08-31",
+            "orderReference": "4373",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "1076507519",
+                "dv": "",
+                "documentType": {
+                    "code": "2",
+                    "description": "Tarjeta de identidad"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Juan José",
+                "lastname": "Vargas Garzón",
+                "phone": "3212878667",
+                "address": "CRA 7 3-31 ",
+                "city": {
+                    "code": "629",
+                    "description": "Pitalito"
+                },
+                "email": "wartoy43@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "629",
+                "description": "Pitalito"
+            },
+            "note": "Matrícula IV Semestre, 2 Módulos y Derechos de Grado - sede 02",
+            "items": [
+                {
+                    "code": "02",
+                    "description": "FORMACIÓN ACADÉMICA EN CIENCIAS DEL CONOCIMIENTO TEOLÓGICO",
+                    "price": 60000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                },
+                {
+                    "code": "03",
+                    "description": "MATERIAL EDUCATIVO: MÓDULOS",
+                    "price": 12000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 24000
+                        }
+                    ]
+                },
+                {
+                    "code": "11",
+                    "description": "DERECHOS DE GRADO",
+                    "price": 40000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 40000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 24000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 40000
+                }
+            ],
+            "total": "124000",
+            "totalTaxes": "0",
+            "totalToPay": "124000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1234",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=3ce911139e288e723021d696dfaba99112c2292ae7b88c23a217445359e41a55df4f6287c7fc0b8757a3bc6bd430ade0",
+            "date": "2026-08-31",
+            "orderReference": "4372",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "1083923007",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Teylor",
+                "lastname": "Navia Montilla",
+                "phone": "3204914648",
+                "address": "Vereda Montebonito ",
+                "city": {
+                    "code": "629",
+                    "description": "Pitalito"
+                },
+                "email": "teilor.753@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "629",
+                "description": "Pitalito"
+            },
+            "note": "Matrícula y Módulos Curso III - sede 02",
+            "items": [
+                {
+                    "code": "07",
+                    "description": "CURSO III: PROFUNDIZACIÓN EN TEOLOGÍA II",
+                    "price": 90000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 90000
+                        }
+                    ]
+                },
+                {
+                    "code": "03",
+                    "description": "MATERIAL EDUCATIVO: MÓDULOS",
+                    "price": 12000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 90000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "150000",
+            "totalTaxes": "0",
+            "totalToPay": "150000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1233",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=6bf6e5491f53a20d45885dafe20bc4a0ba1a50bb1955f38204e2276045e09297da84a066ef875efbac155e6797c75fec",
+            "date": "2026-08-31",
+            "orderReference": "4371",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "1077847512",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Claudia Milena ",
+                "lastname": "Flórez Guayan",
+                "phone": "3124739716",
+                "address": "Centro",
+                "city": {
+                    "code": "615",
+                    "description": "Garzón"
+                },
+                "email": "claudiaguayan8@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "615",
+                "description": "Garzón"
+            },
+            "note": "Matrícula II Semestre - sede 04",
+            "items": [
+                {
+                    "code": "02",
+                    "description": "FORMACIÓN ACADÉMICA EN CIENCIAS DEL CONOCIMIENTO TEOLÓGICO",
+                    "price": 60000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "60000",
+            "totalTaxes": "0",
+            "totalToPay": "60000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1232",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=3a8064b8545efe6e955e18d5b9da6ce7364aed76ab533d1effc5abc7ae642d09b4e489d4c0c2f8ddf9cbdf6eeede1a3a",
+            "date": "2026-08-31",
+            "orderReference": "4370",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "79436449",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Leonardo",
+                "lastname": "Vargas Méndez",
+                "phone": "3157579093",
+                "address": "Centro",
+                "city": {
+                    "code": "615",
+                    "description": "Garzón"
+                },
+                "email": "docleitovargas@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "615",
+                "description": "Garzón"
+            },
+            "note": "Matrícula III y IV Semestre - sede 01",
+            "items": [
+                {
+                    "code": "02",
+                    "description": "FORMACIÓN ACADÉMICA EN CIENCIAS DEL CONOCIMIENTO TEOLÓGICO",
+                    "price": 60000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 120000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 120000
+                }
+            ],
+            "total": "120000",
+            "totalTaxes": "0",
+            "totalToPay": "120000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1231",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=31c19f59a045bc5ae3948efc551005c8da9b462e3794496d329db08824dc734a960b9e7fc126bc7dfbf30476bf7a375b",
+            "date": "2026-08-31",
+            "orderReference": "4369",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "79436449",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Leonardo",
+                "lastname": "Vargas Méndez",
+                "phone": "3157579093",
+                "address": "Centro",
+                "city": {
+                    "code": "615",
+                    "description": "Garzón"
+                },
+                "email": "docleitovargas@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "615",
+                "description": "Garzón"
+            },
+            "note": "Matrícula y Módulos II Semestre - sede 01",
+            "items": [
+                {
+                    "code": "02",
+                    "description": "FORMACIÓN ACADÉMICA EN CIENCIAS DEL CONOCIMIENTO TEOLÓGICO",
+                    "price": 60000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                },
+                {
+                    "code": "03",
+                    "description": "MATERIAL EDUCATIVO: MÓDULOS",
+                    "price": 12000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "120000",
+            "totalTaxes": "0",
+            "totalToPay": "120000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1230",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=7c3aaab8c595e342e237cc4cfe3282c65d7d5221d26fc43ee9798bd4c2eabd2ef7791a65f4c56a2e5600200e25d42429",
+            "date": "2026-08-31",
+            "orderReference": "4368",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "1077856091",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Jesús David",
+                "lastname": "Rodríguez Díaz",
+                "phone": "3132795117",
+                "address": "CARRERA 5A #29",
+                "city": {
+                    "code": "635",
+                    "description": "Tarqui"
+                },
+                "email": "documentosistep@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "635",
+                "description": "Tarqui"
+            },
+            "note": "Matrícula y Módulos Curso II - sede 08",
+            "items": [
+                {
+                    "code": "06",
+                    "description": "CURSO II: PROFUNDIZACIÓN EN TEOLOGÍA I",
+                    "price": 90000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 90000
+                        }
+                    ]
+                },
+                {
+                    "code": "03",
+                    "description": "MATERIAL EDUCATIVO: MÓDULOS",
+                    "price": 12000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 90000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "150000",
+            "totalTaxes": "0",
+            "totalToPay": "150000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1229",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=63d4299fb4fe6547ba9385f8232633602ef5fb84802bce37d4652ae1d2a51ce5cf4cb76e0ac48cdc119966e34f1586be",
+            "date": "2026-08-31",
+            "orderReference": "4367",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "26482507",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "María Abeima",
+                "lastname": "Pencué Embus",
+                "phone": "3227704766",
+                "address": "Centro",
+                "city": {
+                    "code": "614",
+                    "description": "Elías"
+                },
+                "email": "abeimapencue5@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "614",
+                "description": "Elías"
+            },
+            "note": "Matrícula y Módulos Curso II - sede 07",
+            "items": [
+                {
+                    "code": "06",
+                    "description": "CURSO II: PROFUNDIZACIÓN EN TEOLOGÍA I",
+                    "price": 90000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 90000
+                        }
+                    ]
+                },
+                {
+                    "code": "03",
+                    "description": "MATERIAL EDUCATIVO: MÓDULOS",
+                    "price": 12000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 90000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "150000",
+            "totalTaxes": "0",
+            "totalToPay": "150000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1228",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=60bb1666c0121a0c0dd6f17774f82dbe3c8338e5369afa2cc0b0f4dbb6b015e717c0c1c3be8c95787286a6e97525c750",
+            "date": "2026-08-31",
+            "orderReference": "4366",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "52341456",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "María Leignis",
+                "lastname": "Penagos Ramos",
+                "phone": "3115872535",
+                "address": "Centro",
+                "city": {
+                    "code": "615",
+                    "description": "Garzón"
+                },
+                "email": "mariapr2408@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "615",
+                "description": "Garzón"
+            },
+            "note": "Matrícula III Semestre - sede 04",
+            "items": [
+                {
+                    "code": "02",
+                    "description": "FORMACIÓN ACADÉMICA EN CIENCIAS DEL CONOCIMIENTO TEOLÓGICO",
+                    "price": 60000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "60000",
+            "totalTaxes": "0",
+            "totalToPay": "60000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1227",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=74dd107cd9b3a1709d8639e9394980421f414da7a0fe4ccf4b351bb94ef90867e57441eb42a466f1d04cd9461d9a1b0d",
+            "date": "2026-08-31",
+            "orderReference": "Subsidiado",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "12195468",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Uriel",
+                "lastname": "Marín Parra",
+                "phone": "3106297223",
+                "address": "San Antonio del Pescado",
+                "city": {
+                    "code": "615",
+                    "description": "Garzón"
+                },
+                "email": "documentosistep@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "1",
+                "description": "Instrumento no definido"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "615",
+                "description": "Garzón"
+            },
+            "note": "Matrícula III Semestre - sede 01",
+            "items": [
+                {
+                    "code": "02",
+                    "description": "FORMACIÓN ACADÉMICA EN CIENCIAS DEL CONOCIMIENTO TEOLÓGICO",
+                    "price": 60000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "60000",
+            "totalTaxes": "0",
+            "totalToPay": "60000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1226",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=6f3cb62c0f44ecf2d28ed6baeb357189399db168ac4d263c3db7dfdda38c4681e0811b59cc9d13af0cb4c0b7dfb734f7",
+            "date": "2026-08-31",
+            "orderReference": "Subsidiado",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "1077863662",
+                "dv": "",
+                "documentType": {
+                    "code": "2",
+                    "description": "Tarjeta de identidad"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Emmanuel",
+                "lastname": "Rojas González",
+                "phone": "3115649865",
+                "address": "Manzana E casa 22 Villa Karol ",
+                "city": {
+                    "code": "615",
+                    "description": "Garzón"
+                },
+                "email": "vianedgonzalez5@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "1",
+                "description": "Instrumento no definido"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "615",
+                "description": "Garzón"
+            },
+            "note": "Matrícula III Semestre - sede 01",
+            "items": [
+                {
+                    "code": "02",
+                    "description": "FORMACIÓN ACADÉMICA EN CIENCIAS DEL CONOCIMIENTO TEOLÓGICO",
+                    "price": 60000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "60000",
+            "totalTaxes": "0",
+            "totalToPay": "60000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1225",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=ed3af3a79885dad9aa8cbe8fe99f5cc3ed437f4e70f487a6f03f31f3fcda4641bdcd76091af4ba887116de8d6cb7665e",
+            "date": "2026-08-31",
+            "orderReference": "Subsidiado",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "55112286",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Vianed Stella ",
+                "lastname": "González Rivera",
+                "phone": "3115649865",
+                "address": "Manzana E casa 22 Villa Karol",
+                "city": {
+                    "code": "615",
+                    "description": "Garzón"
+                },
+                "email": "vianedgonzalez5@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "1",
+                "description": "Instrumento no definido"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "615",
+                "description": "Garzón"
+            },
+            "note": "Matrícula III Semestre - sede 01",
+            "items": [
+                {
+                    "code": "02",
+                    "description": "FORMACIÓN ACADÉMICA EN CIENCIAS DEL CONOCIMIENTO TEOLÓGICO",
+                    "price": 60000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "60000",
+            "totalTaxes": "0",
+            "totalToPay": "60000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1224",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=a8ca8f062ebe8e398cd97040d3fead5138a91c5e28c6d25db4588dec7741f4dfb880f3b4e8329045512b3f04643b6640",
+            "date": "2026-08-31",
+            "orderReference": "Subsidiado",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "52341456",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "María Leignis",
+                "lastname": "Penagos Ramos",
+                "phone": "3115872535",
+                "address": "Centro",
+                "city": {
+                    "code": "615",
+                    "description": "Garzón"
+                },
+                "email": "mariapr2408@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "1",
+                "description": "Instrumento no definido"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "615",
+                "description": "Garzón"
+            },
+            "note": "Matrícula II Semestre - sede 04",
+            "items": [
+                {
+                    "code": "02",
+                    "description": "FORMACIÓN ACADÉMICA EN CIENCIAS DEL CONOCIMIENTO TEOLÓGICO",
+                    "price": 60000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "60000",
+            "totalTaxes": "0",
+            "totalToPay": "60000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1223",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=7df2e3d847dd45cd3871735ca643d2d84ccef28ff0217cc0abb8db0a0ffaca373a9a4a7d83936013e37dbc9df42bbfc4",
+            "date": "2026-08-31",
+            "orderReference": "4365",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "16185477",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Roberto",
+                "lastname": "Penagos",
+                "phone": "3125790287",
+                "address": "Vereda San Francisco",
+                "city": {
+                    "code": "629",
+                    "description": "Pitalito"
+                },
+                "email": "robertto.penagos@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "10",
+                "description": "Efectivo"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "629",
+                "description": "Pitalito"
+            },
+            "note": "Matrícula y Módulos Curso III - sede 02",
+            "items": [
+                {
+                    "code": "07",
+                    "description": "CURSO III: PROFUNDIZACIÓN EN TEOLOGÍA II",
+                    "price": 90000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 90000
+                        }
+                    ]
+                },
+                {
+                    "code": "03",
+                    "description": "MATERIAL EDUCATIVO: MÓDULOS",
+                    "price": 12000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 90000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "150000",
+            "totalTaxes": "0",
+            "totalToPay": "150000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1222",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=b579633613759835dfc031e765efcf3b4966d4e71cc94305417096bf610a0b0127dbc87223a61433e95cdbbea7683c45",
+            "date": "2026-08-31",
+            "orderReference": "Subsidiado",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "1025653466",
+                "dv": "",
+                "documentType": {
+                    "code": "2",
+                    "description": "Tarjeta de identidad"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "María Paula",
+                "lastname": "Cardona Bernal",
+                "phone": "3107577909 ",
+                "address": "Carrera 4este #21-63",
+                "city": {
+                    "code": "629",
+                    "description": "Pitalito"
+                },
+                "email": "mapaulacarber@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "1",
+                "description": "Instrumento no definido"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "629",
+                "description": "Pitalito"
+            },
+            "note": "Matrícula y Módulos Curso III - sede 02",
+            "items": [
+                {
+                    "code": "07",
+                    "description": "CURSO III: PROFUNDIZACIÓN EN TEOLOGÍA II",
+                    "price": 90000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 90000
+                        }
+                    ]
+                },
+                {
+                    "code": "03",
+                    "description": "MATERIAL EDUCATIVO: MÓDULOS",
+                    "price": 12000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 90000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "150000",
+            "totalTaxes": "0",
+            "totalToPay": "150000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1221",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=8e6b069414183ce0fa95c4679cdcb2a519847ead59923ce8f1a4e24fd5324e941ca758902e7d5f0c5967ea14994cdf19",
+            "date": "2026-08-31",
+            "orderReference": "4364",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "26482209",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Rita Elsa ",
+                "lastname": "Pantevez Bautista ",
+                "phone": "3174298891",
+                "address": "Calle 2 # 9- 148",
+                "city": {
+                    "code": "614",
+                    "description": "Elías"
+                },
+                "email": "pantevezritaelsa@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "614",
+                "description": "Elías"
+            },
+            "note": "Matrícula y Módulos Curso II - sede 07",
+            "items": [
+                {
+                    "code": "06",
+                    "description": "CURSO II: PROFUNDIZACIÓN EN TEOLOGÍA I",
+                    "price": 90000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 90000
+                        }
+                    ]
+                },
+                {
+                    "code": "03",
+                    "description": "MATERIAL EDUCATIVO: MÓDULOS",
+                    "price": 12000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 90000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "150000",
+            "totalTaxes": "0",
+            "totalToPay": "150000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1220",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=36156c0af62b908ba3c12f70be092c1f3eddfc8a9756a6d79d0440631e03dcd2395c7a2a991a19141d841683e4a71ab8",
+            "date": "2026-08-31",
+            "orderReference": "4363",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "26482280",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Olga Regina",
+                "lastname": "Pantevez Bautista",
+                "phone": "3124683958",
+                "address": "Calle 2 No 9 - 148",
+                "city": {
+                    "code": "614",
+                    "description": "Elías"
+                },
+                "email": "repaba.1962@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "614",
+                "description": "Elías"
+            },
+            "note": "Matrícula y Módulos Curso II - sede 07",
+            "items": [
+                {
+                    "code": "06",
+                    "description": "CURSO II: PROFUNDIZACIÓN EN TEOLOGÍA I",
+                    "price": 90000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 90000
+                        }
+                    ]
+                },
+                {
+                    "code": "03",
+                    "description": "MATERIAL EDUCATIVO: MÓDULOS",
+                    "price": 12000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 90000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "150000",
+            "totalTaxes": "0",
+            "totalToPay": "150000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1219",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=8df5bf43205c5969440de8cc660bd6596b18a018f31dfca7c03e5b4005dcceb276580d20b44f31c780455ba00a65843d",
+            "date": "2026-08-31",
+            "orderReference": "4362",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "26542478",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Gloria Ruth",
+                "lastname": "Macías Cerquera",
+                "phone": "3125188139",
+                "address": "VEREDA PALMARITO",
+                "city": {
+                    "code": "629",
+                    "description": "Pitalito"
+                },
+                "email": "gloriaruthmc@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "629",
+                "description": "Pitalito"
+            },
+            "note": "Matrícula y Módulos Curso I - sede 02",
+            "items": [
+                {
+                    "code": "05",
+                    "description": "CURSO I: TEOLOGÍA BÁSICA",
+                    "price": 150000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 150000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 150000
+                }
+            ],
+            "total": "150000",
+            "totalTaxes": "0",
+            "totalToPay": "150000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1218",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=9b6df7b80a25114511eb5f262d573d031a4ca8c51cfc265d20c9782baa70c7d8925c48a859bd1f9e91500c7153a2f9e5",
+            "date": "2026-08-31",
+            "orderReference": "4361",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "1083892398",
+                "dv": "",
+                "documentType": {
+                    "code": "2",
+                    "description": "Tarjeta de identidad"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Jesús David",
+                "lastname": "Núñez Olaya",
+                "phone": "3133474326",
+                "address": "Cra 1A #15-53",
+                "city": {
+                    "code": "629",
+                    "description": "Pitalito"
+                },
+                "email": "jesusolaya986@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "629",
+                "description": "Pitalito"
+            },
+            "note": "Matrícula y Módulos Curso IV - sede 02",
+            "items": [
+                {
+                    "code": "08",
+                    "description": "CURSO IV: PROFUNDIZACIÓN EN TEOLOGÍA III",
+                    "price": 140000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 140000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 140000
+                }
+            ],
+            "total": "140000",
+            "totalTaxes": "0",
+            "totalToPay": "140000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1217",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=f5e6b77d7d794301f7b1420312b603860b8910aaf9e1b4d6a216c9a19f6d1120519057f49b233d9e0ef55eaefbb554bc",
+            "date": "2026-08-31",
+            "orderReference": "4360",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "1083916720",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Julián",
+                "lastname": "Barrera Núñez",
+                "phone": "3102404880",
+                "address": "CARRERA 2 A ESTE # 18 - 70",
+                "city": {
+                    "code": "629",
+                    "description": "Pitalito"
+                },
+                "email": "barreran.julian@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "629",
+                "description": "Pitalito"
+            },
+            "note": "Matrícula y Módulos Curso III - sede 02",
+            "items": [
+                {
+                    "code": "07",
+                    "description": "CURSO III: PROFUNDIZACIÓN EN TEOLOGÍA II",
+                    "price": 90000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 90000
+                        }
+                    ]
+                },
+                {
+                    "code": "03",
+                    "description": "MATERIAL EDUCATIVO: MÓDULOS",
+                    "price": 12000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 90000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "150000",
+            "totalTaxes": "0",
+            "totalToPay": "150000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1216",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=33fb2ea3a139b00e3c198cb69c2a0250ef49548cb4ccd633c24c6378a3a1884b2e340a5f683362b91c2c4eee710cc2ce",
+            "date": "2026-08-31",
+            "orderReference": "4358",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "1083901527",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Leidy Alejandra ",
+                "lastname": "Bolaños Scalante",
+                "phone": "3178578647",
+                "address": "Av 318 21 sur",
+                "city": {
+                    "code": "629",
+                    "description": "Pitalito"
+                },
+                "email": "alejandrascalante7@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "629",
+                "description": "Pitalito"
+            },
+            "note": "Matrícula IV Semestre, 4 Módulos y Derechos de Grado - sede 02",
+            "items": [
+                {
+                    "code": "02",
+                    "description": "FORMACIÓN ACADÉMICA EN CIENCIAS DEL CONOCIMIENTO TEOLÓGICO",
+                    "price": 60000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                },
+                {
+                    "code": "03",
+                    "description": "MATERIAL EDUCATIVO: MÓDULOS",
+                    "price": 12000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 48000
+                        }
+                    ]
+                },
+                {
+                    "code": "11",
+                    "description": "DERECHOS DE GRADO",
+                    "price": 40000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 40000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 48000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 40000
+                }
+            ],
+            "total": "148000",
+            "totalTaxes": "0",
+            "totalToPay": "148000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1215",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=e70d97a3693a363eb7e51c2cc5125e696b39949a3b6e3f29da470161589aa3cb33baa48f0b9172c6e6865056d39f5644",
+            "date": "2026-08-31",
+            "orderReference": "4357",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "27362290",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Laura Melina",
+                "lastname": "Arcila Pérez",
+                "phone": "3103956109",
+                "address": "V/ LLANOGRANDE",
+                "city": {
+                    "code": "629",
+                    "description": "Pitalito"
+                },
+                "email": "laura121916@hotmail.es"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "629",
+                "description": "Pitalito"
+            },
+            "note": "Matrícula Curso III - sede 02",
+            "items": [
+                {
+                    "code": "07",
+                    "description": "CURSO III: PROFUNDIZACIÓN EN TEOLOGÍA II",
+                    "price": 90000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 90000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 90000
+                }
+            ],
+            "total": "90000",
+            "totalTaxes": "0",
+            "totalToPay": "90000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1214",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=bc37e9ef8de0fcc5bad30058eba88b8daac83cec151653ee65bbcb5d1744c1e5feb407093b609cf3e8dfdb51e3ee684f",
+            "date": "2026-08-31",
+            "orderReference": "4356",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "83040603",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Enoc",
+                "lastname": "Montenegro Villamarín",
+                "phone": "3144130549",
+                "address": "V/ LLANOGRANDE ",
+                "city": {
+                    "code": "629",
+                    "description": "Pitalito"
+                },
+                "email": "enocmontenegrovillamarin@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "629",
+                "description": "Pitalito"
+            },
+            "note": "Matrícula y Módulos Curso III - sede 02",
+            "items": [
+                {
+                    "code": "07",
+                    "description": "CURSO III: PROFUNDIZACIÓN EN TEOLOGÍA II",
+                    "price": 90000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 90000
+                        }
+                    ]
+                },
+                {
+                    "code": "03",
+                    "description": "MATERIAL EDUCATIVO: MÓDULOS",
+                    "price": 12000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 90000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "150000",
+            "totalTaxes": "0",
+            "totalToPay": "150000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1213",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=ef00e4093bc852e5cd19a6a96d38000fcefc644f2de215c222fa0e0a0b0389ed70788c915babed3e21f4a7fdf74d5532",
+            "date": "2026-08-31",
+            "orderReference": "4355",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "1120069551",
+                "dv": "",
+                "documentType": {
+                    "code": "2",
+                    "description": "Tarjeta de identidad"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Aylin Nicol",
+                "lastname": "Montenegro Arcila",
+                "phone": "3207344972",
+                "address": "Centro",
+                "city": {
+                    "code": "629",
+                    "description": "Pitalito"
+                },
+                "email": "aylinmontenegro935@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "629",
+                "description": "Pitalito"
+            },
+            "note": "Matrícula y Módulos Curso I - sede 02",
+            "items": [
+                {
+                    "code": "05",
+                    "description": "CURSO I: TEOLOGÍA BÁSICA",
+                    "price": 150000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 150000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 150000
+                }
+            ],
+            "total": "150000",
+            "totalTaxes": "0",
+            "totalToPay": "150000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1212",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=a3c2e00752ac56ad455fc34c7baf90b8c350cced191cedf3fe408492e8e005c9e5556fa25cbd9216bdfab177515fbb55",
+            "date": "2026-08-31",
+            "orderReference": "4354",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "36281311",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Carmen Jaqueline",
+                "lastname": "Toro Maldonado",
+                "phone": "3204831948",
+                "address": "Conjunto residencial Los Cedros",
+                "city": {
+                    "code": "629",
+                    "description": "Pitalito"
+                },
+                "email": "yita_72@hotmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "629",
+                "description": "Pitalito"
+            },
+            "note": "Matrícula y Módulos Curso III - sede 02",
+            "items": [
+                {
+                    "code": "07",
+                    "description": "CURSO III: PROFUNDIZACIÓN EN TEOLOGÍA II",
+                    "price": 90000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 90000
+                        }
+                    ]
+                },
+                {
+                    "code": "03",
+                    "description": "MATERIAL EDUCATIVO: MÓDULOS",
+                    "price": 12000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 90000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "150000",
+            "totalTaxes": "0",
+            "totalToPay": "150000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1211",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=3ce8ff6c687a1973a6c102dc2f176941ed3ce042751ae1fab372b0e25adf3d4835d4b011c7d9aa60d5e7c70a7dc17b96",
+            "date": "2026-08-31",
+            "orderReference": "4353",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "55070683",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Zayda Gisela",
+                "lastname": "Losada Velásquez",
+                "phone": "3105762086",
+                "address": "CRA 2 A # 3-60",
+                "city": {
+                    "code": "615",
+                    "description": "Garzón"
+                },
+                "email": "seguridadlaboralhseq@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "10",
+                "description": "Efectivo"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "615",
+                "description": "Garzón"
+            },
+            "note": "Matrícula III Semestre - sede 01",
+            "items": [
+                {
+                    "code": "02",
+                    "description": "FORMACIÓN ACADÉMICA EN CIENCIAS DEL CONOCIMIENTO TEOLÓGICO",
+                    "price": 60000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "60000",
+            "totalTaxes": "0",
+            "totalToPay": "60000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1210",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=41620ae53752a4c04f355b5c37a2e517066e89f564ec0daf1c856335976cbbe07333696b23a6cb53397d557ec6eb0ca7",
+            "date": "2026-08-31",
+            "orderReference": "4352",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "55065723",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Lina Paola",
+                "lastname": "Robles Trujillo",
+                "phone": "3108960592",
+                "address": "Centro",
+                "city": {
+                    "code": "615",
+                    "description": "Garzón"
+                },
+                "email": "linarobles2020@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "10",
+                "description": "Efectivo"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "615",
+                "description": "Garzón"
+            },
+            "note": "Módulo Teología Espiritual - Sede 01",
+            "items": [
+                {
+                    "code": "03",
+                    "description": "MATERIAL EDUCATIVO: MÓDULOS",
+                    "price": 12000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 12000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 12000
+                }
+            ],
+            "total": "12000",
+            "totalTaxes": "0",
+            "totalToPay": "12000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1209",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=38a78c0ee11d8dd0fb8e1135a9686a0d2566b259ae66d45db2cacfffbc620e210328d9ec6ca09026801ff68f168b5d5a",
+            "date": "2026-08-31",
+            "orderReference": "4351",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "1145725838",
+                "dv": "",
+                "documentType": {
+                    "code": "2",
+                    "description": "Tarjeta de identidad"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Kelin Viviana",
+                "lastname": "Valencia Vanegas",
+                "phone": "3125099636",
+                "address": "Cr 1 #1c 184",
+                "city": {
+                    "code": "615",
+                    "description": "Garzón"
+                },
+                "email": "wvalenciavanegas@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "10",
+                "description": "Efectivo"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "615",
+                "description": "Garzón"
+            },
+            "note": "Matrícula III Semestre y Módulos (Teología Espiritual y Eclesiología) - sede 01",
+            "items": [
+                {
+                    "code": "02",
+                    "description": "FORMACIÓN ACADÉMICA EN CIENCIAS DEL CONOCIMIENTO TEOLÓGICO",
+                    "price": 60000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                },
+                {
+                    "code": "03",
+                    "description": "MATERIAL EDUCATIVO: MÓDULOS",
+                    "price": 12000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 24000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 24000
+                }
+            ],
+            "total": "84000",
+            "totalTaxes": "0",
+            "totalToPay": "84000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1208",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=554d9ce10bb7690c4989de51c230c6fb95c02403586bf914a4d08b5a0e7a860264d4d235a51082a4430b085d1ce7e233",
+            "date": "2026-08-31",
+            "orderReference": "4350",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "55063396",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Erika Yineth",
+                "lastname": "Serrano Ramón",
+                "phone": "3163773836",
+                "address": "CALLE 4 # 11-37 BARRIO RODRIGO LARA",
+                "city": {
+                    "code": "615",
+                    "description": "Garzón"
+                },
+                "email": "proyectosynegocios2017@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "615",
+                "description": "Garzón"
+            },
+            "note": "Matrícula y Módulos III Semestre - sede 01",
+            "items": [
+                {
+                    "code": "02",
+                    "description": "FORMACIÓN ACADÉMICA EN CIENCIAS DEL CONOCIMIENTO TEOLÓGICO",
+                    "price": 60000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                },
+                {
+                    "code": "03",
+                    "description": "MATERIAL EDUCATIVO: MÓDULOS",
+                    "price": 12000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "120000",
+            "totalTaxes": "0",
+            "totalToPay": "120000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1207",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=0dd24a1242033f5192cf3e4c2a6dcedbae8b087e1f1796c662cbb4277fba273070307decda07db1dff26c0cf15d7fb9a",
+            "date": "2026-08-31",
+            "orderReference": "4349",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "1000785782",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Víctor Alfonso",
+                "lastname": "Parra Cardozo",
+                "phone": "3115426117",
+                "address": "Vereda Bajo Solarte",
+                "city": {
+                    "code": "629",
+                    "description": "Pitalito"
+                },
+                "email": "victorparra821@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "629",
+                "description": "Pitalito"
+            },
+            "note": "Matrícula y Módulos Curso I - sede 02",
+            "items": [
+                {
+                    "code": "05",
+                    "description": "CURSO I: TEOLOGÍA BÁSICA",
+                    "price": 150000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 150000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 150000
+                }
+            ],
+            "total": "150000",
+            "totalTaxes": "0",
+            "totalToPay": "150000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1206",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=f5d11dffa1646eaba9c9ed28f2a39b5cd3738aff573aee476234db8dc15566b1d277055d9df58cfbedd4a42a55aca39d",
+            "date": "2026-08-31",
+            "orderReference": "4348",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "36312524",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "María Goretti",
+                "lastname": "Arce Dussán",
+                "phone": "3004944361",
+                "address": "Cra 5 N° 2-60",
+                "city": {
+                    "code": "629",
+                    "description": "Pitalito"
+                },
+                "email": "maria.arce@asmetsalud.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/31",
+            "municipality": {
+                "code": "629",
+                "description": "Pitalito"
+            },
+            "note": "Matrícula y Módulos Curso IV - sede 02",
+            "items": [
+                {
+                    "code": "08",
+                    "description": "CURSO IV: PROFUNDIZACIÓN EN TEOLOGÍA III",
+                    "price": 150000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 150000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 150000
+                }
+            ],
+            "total": "150000",
+            "totalTaxes": "0",
+            "totalToPay": "150000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1205",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=96a9859e73d8055e4d3d79e1e9286b135e2b1e7cc6eeeb6d58e58862f190bd7e900a1955edd2b258670dc5874ad9d662",
+            "date": "2026-08-29",
+            "orderReference": "4347",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "1077012589",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Yenica Lucía",
+                "lastname": "Chaux Ortíz",
+                "phone": "3107953267",
+                "address": "Urbanización Ricaute Vargas",
+                "city": {
+                    "code": "614",
+                    "description": "Elías"
+                },
+                "email": "yenicachaux@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/29",
+            "municipality": {
+                "code": "614",
+                "description": "Elías"
+            },
+            "note": "Matrícula y Módulos Curso II - sede 07",
+            "items": [
+                {
+                    "code": "06",
+                    "description": "CURSO II: PROFUNDIZACIÓN EN TEOLOGÍA I",
+                    "price": 90000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 90000
+                        }
+                    ]
+                },
+                {
+                    "code": "03",
+                    "description": "MATERIAL EDUCATIVO: MÓDULOS",
+                    "price": 12000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 90000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "150000",
+            "totalTaxes": "0",
+            "totalToPay": "150000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1204",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=0466153a88e38e4d35d6b82cb308afa52480e4d2bf0689592651897532a42824b2e843c87b7ffaec58d10f287e8819f9",
+            "date": "2026-08-29",
+            "orderReference": "4346",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "1077012342",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Herney",
+                "lastname": "Plazas Serrato",
+                "phone": "3124333410",
+                "address": "Calle2c #9-21",
+                "city": {
+                    "code": "614",
+                    "description": "Elías"
+                },
+                "email": "plazasgaby2020@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/29",
+            "municipality": {
+                "code": "614",
+                "description": "Elías"
+            },
+            "note": "Matrícula y Módulos Curso II - sede 07",
+            "items": [
+                {
+                    "code": "06",
+                    "description": "CURSO II: PROFUNDIZACIÓN EN TEOLOGÍA I",
+                    "price": 90000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 90000
+                        }
+                    ]
+                },
+                {
+                    "code": "03",
+                    "description": "MATERIAL EDUCATIVO: MÓDULOS",
+                    "price": 12000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 90000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "150000",
+            "totalTaxes": "0",
+            "totalToPay": "150000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1203",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=a29e267be94a615154391fb883c0681cbae19e8d1bb9624d39baf087ef6e1685b3d49720b3a3aa7c765b09f3f4f61732",
+            "date": "2026-08-29",
+            "orderReference": "4345",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "26482176",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Yomar",
+                "lastname": "Panteves Bautista",
+                "phone": "3106660213",
+                "address": "Calle 2 No. 9-148",
+                "city": {
+                    "code": "614",
+                    "description": "Elías"
+                },
+                "email": "panbau.2003@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/29",
+            "municipality": {
+                "code": "614",
+                "description": "Elías"
+            },
+            "note": "Matrícula y Módulos Curso II - sede 07",
+            "items": [
+                {
+                    "code": "06",
+                    "description": "CURSO II: PROFUNDIZACIÓN EN TEOLOGÍA I",
+                    "price": 90000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 90000
+                        }
+                    ]
+                },
+                {
+                    "code": "03",
+                    "description": "MATERIAL EDUCATIVO: MÓDULOS",
+                    "price": 12000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 90000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "150000",
+            "totalTaxes": "0",
+            "totalToPay": "150000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1202",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=6eb16924a44b69012a42387033de146fdc6d82752f6d0b03c1a54908c98b0eb9b127ea5aec3524a5562101e1354ebc09",
+            "date": "2026-08-29",
+            "orderReference": "4344",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "1077012272",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Claudia",
+                "lastname": "Mancilla Cuéllar",
+                "phone": "3133764707",
+                "address": "Vereda San Vicente",
+                "city": {
+                    "code": "614",
+                    "description": "Elías"
+                },
+                "email": "claudiamancill@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/29",
+            "municipality": {
+                "code": "614",
+                "description": "Elías"
+            },
+            "note": "Matrícula y Módulos Curso II - sede 07",
+            "items": [
+                {
+                    "code": "06",
+                    "description": "CURSO II: PROFUNDIZACIÓN EN TEOLOGÍA I",
+                    "price": 90000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 90000
+                        }
+                    ]
+                },
+                {
+                    "code": "03",
+                    "description": "MATERIAL EDUCATIVO: MÓDULOS",
+                    "price": 12000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 90000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "150000",
+            "totalTaxes": "0",
+            "totalToPay": "150000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1201",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=77faec399aaa45fb2c6904d26d2bc5429f03ae065078682863ef25c5508a98b9371ffe7db38a1a588cda63d225d9d380",
+            "date": "2026-08-29",
+            "orderReference": "4342",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "1083878824",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Nataly ",
+                "lastname": "Antury Morales",
+                "phone": "3144645222",
+                "address": "Calle 1a #9A 04 este",
+                "city": {
+                    "code": "629",
+                    "description": "Pitalito"
+                },
+                "email": "nanturym21@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/29",
+            "municipality": {
+                "code": "629",
+                "description": "Pitalito"
+            },
+            "note": "Matrícula y Módulos Curso III - sede 02",
+            "items": [
+                {
+                    "code": "07",
+                    "description": "CURSO III: PROFUNDIZACIÓN EN TEOLOGÍA II",
+                    "price": 90000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 90000
+                        }
+                    ]
+                },
+                {
+                    "code": "03",
+                    "description": "MATERIAL EDUCATIVO: MÓDULOS",
+                    "price": 12000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 90000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "150000",
+            "totalTaxes": "0",
+            "totalToPay": "150000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1200",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=251dd93497b856f9da46d37d773507e21f8495055f615d2aa974292880c0f6caeca1bd3347dcb31a477ac02f5148959e",
+            "date": "2026-08-29",
+            "orderReference": "4341",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "52431720",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Karen Milena",
+                "lastname": "Ruales Ordoñez",
+                "phone": "3138524214",
+                "address": "CALLE 6 # 8-16 ",
+                "city": {
+                    "code": "624",
+                    "description": "Oporapa"
+                },
+                "email": "karenru1@hotmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/29",
+            "municipality": {
+                "code": "624",
+                "description": "Oporapa"
+            },
+            "note": "Matrícula III Semestre - sede 04",
+            "items": [
+                {
+                    "code": "02",
+                    "description": "FORMACIÓN ACADÉMICA EN CIENCIAS DEL CONOCIMIENTO TEOLÓGICO",
+                    "price": 60000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "60000",
+            "totalTaxes": "0",
+            "totalToPay": "60000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1199",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=4c37cb755bd403ddbe3ec3c388956e3c91101487bd0fd3d1dc057363a2f79a2900d89fa47eb81089b42923e20e7c00d2",
+            "date": "2026-08-29",
+            "orderReference": "4340",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "55066458",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Arleth Lilian",
+                "lastname": "Muñoz Tapia",
+                "phone": "3134506917",
+                "address": "Calle 7 # 16-20",
+                "city": {
+                    "code": "615",
+                    "description": "Garzón"
+                },
+                "email": "lilian.munoz.tapia@hotmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/29",
+            "municipality": {
+                "code": "615",
+                "description": "Garzón"
+            },
+            "note": "Matrícula IV Semestre - sede 01",
+            "items": [
+                {
+                    "code": "02",
+                    "description": "FORMACIÓN ACADÉMICA EN CIENCIAS DEL CONOCIMIENTO TEOLÓGICO",
+                    "price": 60000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "60000",
+            "totalTaxes": "0",
+            "totalToPay": "60000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1198",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=75c87ed860d70277410fba4d92b845bc78c6e048363cf4cd35b18ccae014b7df76103acef9c0e48431e51e2ea0d9f376",
+            "date": "2026-08-29",
+            "orderReference": "4339",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "1138274792",
+                "dv": "",
+                "documentType": {
+                    "code": "2",
+                    "description": "Tarjeta de identidad"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Jhoan Sebastián ",
+                "lastname": "Ortíz rojas",
+                "phone": "3222644862",
+                "address": "Crr 2# 8-48 ",
+                "city": {
+                    "code": "614",
+                    "description": "Elías"
+                },
+                "email": "rojasmiryan053@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/29",
+            "municipality": {
+                "code": "614",
+                "description": "Elías"
+            },
+            "note": "Matrícula y Módulos Curso II - sede 07",
+            "items": [
+                {
+                    "code": "06",
+                    "description": "CURSO II: PROFUNDIZACIÓN EN TEOLOGÍA I",
+                    "price": 90000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 90000
+                        }
+                    ]
+                },
+                {
+                    "code": "03",
+                    "description": "MATERIAL EDUCATIVO: MÓDULOS",
+                    "price": 12000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 90000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "150000",
+            "totalTaxes": "0",
+            "totalToPay": "150000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1197",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=0253f1fc263a0372e7317de4215f8fb2305e6b7713406c9723bf43a1bd6110104ff2551ac065657e16a917b89160cd53",
+            "date": "2026-08-29",
+            "orderReference": "4338",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "1083899667",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Edgar",
+                "lastname": "Tovar Cuéllar",
+                "phone": "3222895623",
+                "address": "Carrera 17A # 19-83",
+                "city": {
+                    "code": "629",
+                    "description": "Pitalito"
+                },
+                "email": "supervisor13nexarte@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/29",
+            "municipality": {
+                "code": "629",
+                "description": "Pitalito"
+            },
+            "note": "Matrícula y Módulos Curso III - sede 02",
+            "items": [
+                {
+                    "code": "07",
+                    "description": "CURSO III: PROFUNDIZACIÓN EN TEOLOGÍA II",
+                    "price": 90000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 90000
+                        }
+                    ]
+                },
+                {
+                    "code": "03",
+                    "description": "MATERIAL EDUCATIVO: MÓDULOS",
+                    "price": 12000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 90000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "150000",
+            "totalTaxes": "0",
+            "totalToPay": "150000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1196",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=3cac1339d96309c1f0b2eae589c54ca7583b9439faaa19bb1a9a67a1de0762ae638357cf7cc12dc43ced0b2c7f14e813",
+            "date": "2026-08-29",
+            "orderReference": "4337",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "19458988",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Guillermo",
+                "lastname": "Patiño Fandiño",
+                "phone": "31765599166",
+                "address": "CALLE 14 2-52 AP 306 T1",
+                "city": {
+                    "code": "629",
+                    "description": "Pitalito"
+                },
+                "email": "generalesgpf@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/29",
+            "municipality": {
+                "code": "629",
+                "description": "Pitalito"
+            },
+            "note": "Matrícula IV Semestre, 4 Módulos y Derechos de grado - sede 02",
+            "items": [
+                {
+                    "code": "02",
+                    "description": "FORMACIÓN ACADÉMICA EN CIENCIAS DEL CONOCIMIENTO TEOLÓGICO",
+                    "price": 60000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                },
+                {
+                    "code": "03",
+                    "description": "MATERIAL EDUCATIVO: MÓDULOS",
+                    "price": 12000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 48000
+                        }
+                    ]
+                },
+                {
+                    "code": "11",
+                    "description": "DERECHOS DE GRADO",
+                    "price": 40000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 40000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 48000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 40000
+                }
+            ],
+            "total": "148000",
+            "totalTaxes": "0",
+            "totalToPay": "148000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1195",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=1b6bf42d80ca4e060b75d0f8f2e5a35bb96d35013a48d999e3301ed5fe23d7ddc672b1243ff9b5839afa350b0d453022",
+            "date": "2026-08-29",
+            "orderReference": "4336",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "52359136",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Carmen Alicia",
+                "lastname": "Durán Vega",
+                "phone": "3208640129",
+                "address": "Calle 7 #7-38",
+                "city": {
+                    "code": "607",
+                    "description": "Agrado"
+                },
+                "email": "duranalix01@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/29",
+            "municipality": {
+                "code": "607",
+                "description": "Agrado"
+            },
+            "note": "Matrícula IV Semestre - sede 04",
+            "items": [
+                {
+                    "code": "02",
+                    "description": "FORMACIÓN ACADÉMICA EN CIENCIAS DEL CONOCIMIENTO TEOLÓGICO",
+                    "price": 60000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "60000",
+            "totalTaxes": "0",
+            "totalToPay": "60000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1194",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=f28fc2ee7790828ef11c6dfeb95b0abf857746627012c74c02556807f301215fbdf9283a678b1673804a301b46cb1204",
+            "date": "2026-08-29",
+            "orderReference": "4335",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "1010119340",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "María Fernanda",
+                "lastname": "Perdomo Herrera",
+                "phone": "3184874367",
+                "address": "Carrera 5 # 3-39",
+                "city": {
+                    "code": "625",
+                    "description": "Paicol"
+                },
+                "email": "mafeperdo2002@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/29",
+            "municipality": {
+                "code": "625",
+                "description": "Paicol"
+            },
+            "note": "Matrícula IV Semestre - sede 04",
+            "items": [
+                {
+                    "code": "02",
+                    "description": "FORMACIÓN ACADÉMICA EN CIENCIAS DEL CONOCIMIENTO TEOLÓGICO",
+                    "price": 60000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "60000",
+            "totalTaxes": "0",
+            "totalToPay": "60000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1193",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=c09b708e6b046f51ee6cd884d63efd878d2cf7d8907797731a29026423339f7fadf9c7d9c89f8c77d7c0601b11abd006",
+            "date": "2026-08-29",
+            "orderReference": "4334",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "40217510",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Ángela Rocío",
+                "lastname": "Rubio Caicedo",
+                "phone": "3204959689",
+                "address": "Vereda Alto San Miguel",
+                "city": {
+                    "code": "625",
+                    "description": "Paicol"
+                },
+                "email": "angelarubiocai@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/29",
+            "municipality": {
+                "code": "625",
+                "description": "Paicol"
+            },
+            "note": "Matrícula IV Semestre - sede 04",
+            "items": [
+                {
+                    "code": "02",
+                    "description": "FORMACIÓN ACADÉMICA EN CIENCIAS DEL CONOCIMIENTO TEOLÓGICO",
+                    "price": 60000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "60000",
+            "totalTaxes": "0",
+            "totalToPay": "60000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1192",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=b3abd7e8e0e6957c14da433ab4a95ea5f3d3824b88c3a16c87dd84fe83f4d69872825a869a2c2a8c2535489b36402cc0",
+            "date": "2026-08-29",
+            "orderReference": "4333",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "36177302",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Angélica ",
+                "lastname": "Bautista Cárdenas",
+                "phone": "3172264035",
+                "address": "CALLE 6 10 41",
+                "city": {
+                    "code": "615",
+                    "description": "Garzón"
+                },
+                "email": "abautistacar@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/29",
+            "municipality": {
+                "code": "615",
+                "description": "Garzón"
+            },
+            "note": "Matrícula III Semestre - sede 04",
+            "items": [
+                {
+                    "code": "02",
+                    "description": "FORMACIÓN ACADÉMICA EN CIENCIAS DEL CONOCIMIENTO TEOLÓGICO",
+                    "price": 60000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "60000",
+            "totalTaxes": "0",
+            "totalToPay": "60000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1191",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=a09297c293875bb5ed94fc61e1dfba7fa1b7e19f728a63aa2de896f4a72692a224e365022caf44baa6ddc450ceb58042",
+            "date": "2026-08-29",
+            "orderReference": "4332",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "12190009",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "David",
+                "lastname": "Quintero Gaitán",
+                "phone": "3103108129",
+                "address": "CALLE 2 A # 1 D 45 ",
+                "city": {
+                    "code": "615",
+                    "description": "Garzón"
+                },
+                "email": "yinethquinterogonzalez19842017@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/29",
+            "municipality": {
+                "code": "615",
+                "description": "Garzón"
+            },
+            "note": "Matrícula y Módulos Semestre I - sede 01",
+            "items": [
+                {
+                    "code": "01",
+                    "description": "I FORMACIÓN ACADÉMICA EN CIENCIAS DEL CONOCIMIENTO TEOLÓGICO",
+                    "price": 90000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 90000
+                        }
+                    ]
+                },
+                {
+                    "code": "03",
+                    "description": "MATERIAL EDUCATIVO: MÓDULOS",
+                    "price": 12000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 90000
+                },
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "150000",
+            "totalTaxes": "0",
+            "totalToPay": "150000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1190",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=8b831cd25ea21cd3ff6418dfcb22f81480620e57f5e3557374cded55683850364e8159213626c5b09015b6ad178a9025",
+            "date": "2026-08-29",
+            "orderReference": "4331",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "55182952",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Martha",
+                "lastname": "Erazo Muñoz",
+                "phone": "3114433478",
+                "address": "Centro",
+                "city": {
+                    "code": "615",
+                    "description": "Garzón"
+                },
+                "email": "documentosistep@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/29",
+            "municipality": {
+                "code": "615",
+                "description": "Garzón"
+            },
+            "note": "Matrícula III Semestre - sede 04",
+            "items": [
+                {
+                    "code": "02",
+                    "description": "FORMACIÓN ACADÉMICA EN CIENCIAS DEL CONOCIMIENTO TEOLÓGICO",
+                    "price": 60000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "60000",
+            "totalTaxes": "0",
+            "totalToPay": "60000"
+        },
+        {
+            "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+            "userId": "74ad5aae-61c0-481e-8e73-774722d083e4",
+            "number": "1189",
+            "preview": "https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=9c752315af99370100dcc3051ec17369b18c5ea8c587cd9831319721c4e53db00e45fdf939f973c874d8af125f36bfa4",
+            "date": "2026-08-29",
+            "orderReference": "4330",
+            "third": {
+                "entityId": "4251e65a-64e8-4788-a77b-e104834261be",
+                "document": "1007566780",
+                "dv": "",
+                "documentType": {
+                    "code": "3",
+                    "description": "Cédula de ciudadanía"
+                },
+                "organizationType": {
+                    "code": "2",
+                    "description": "Natural"
+                },
+                "liabilityType": {
+                    "code": "117",
+                    "description": "No responsable"
+                },
+                "regimeType": {
+                    "code": "2",
+                    "description": "No responsable de IVA"
+                },
+                "name": "Mariana Carolina",
+                "lastname": "Pinto Pajoy",
+                "phone": "3228213336",
+                "address": "Calle 4# 3 19",
+                "city": {
+                    "code": "617",
+                    "description": "Guadalupe"
+                },
+                "email": "pintopajoymariana@gmail.com"
+            },
+            "wayToPay": {
+                "code": "1",
+                "description": "Contado"
+            },
+            "paymentMethod": {
+                "code": "42",
+                "description": "Consignación bancaria"
+            },
+            "paymentDueDate": "2026/08/29",
+            "municipality": {
+                "code": "617",
+                "description": "Guadalupe"
+            },
+            "note": "Matrícula II Semestre - sede 04",
+            "items": [
+                {
+                    "code": "02",
+                    "description": "FORMACIÓN ACADÉMICA EN CIENCIAS DEL CONOCIMIENTO TEOLÓGICO",
+                    "price": 60000,
+                    "unitMeasure": {
+                        "code": "70",
+                        "description": "Unidad"
+                    },
+                    "itemType": {
+                        "code": "4",
+                        "description": "Estándar de adopción del contribuyente"
+                    },
+                    "taxes": [
+                        {
+                            "code": "19",
+                            "description": "No aplica",
+                            "percent": 0,
+                            "taxAmount": 0,
+                            "taxableAmount": 60000
+                        }
+                    ]
+                }
+            ],
+            "taxes": [
+                {
+                    "code": "19",
+                    "description": "No aplica",
+                    "percent": 0,
+                    "taxAmount": 0,
+                    "taxableAmount": 60000
+                }
+            ],
+            "total": "60000",
+            "totalTaxes": "0",
+            "totalToPay": "60000"
+        }
+    ]

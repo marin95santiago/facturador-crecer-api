@@ -16,6 +16,8 @@ import { getEntityById } from './entity/getEntityById.controller'
 import { login } from './login/login.controller'
 import { requestControlCode } from './login/requestControlCode.controller'
 import { verifyControlCode } from './login/verifyControlCode.controller'
+import { refreshSession } from './login/refreshSession.controller'
+import { logoutSession } from './login/logoutSession.controller'
 
 // Bill
 import { createElectronicBill } from './bill/createElectronicBill.controller'
@@ -67,6 +69,8 @@ export {
   login as loginController,
   requestControlCode as requestControlCodeController,
   verifyControlCode as verifyControlCodeController,
+  refreshSession as refreshSessionController,
+  logoutSession as logoutSessionController,
   createElectronicBill as createElectronicBillController,
   getAllElectronicBills as getAllElectronicBillsController,
   getElectronicBillByNumber as getElectronicBillByNumberController,

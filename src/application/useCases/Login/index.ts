@@ -1,24 +1,36 @@
+import crypto from 'crypto'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import { GetUserByEmailService } from '../../../domain/services/user/GetUserByEmail.service'
 import { GetEntityByIdService } from '../../../domain/services/entity/GetEntityById.service'
 import { UserRepository } from '../../../domain/repositories/User.repository'
 import { EntityRepository } from '../../../domain/repositories/Entity.repository'
+import { RefreshTokenRepository } from '../../../domain/repositories/RefreshToken.repository'
 import { UserNotFoundException } from '../../../domain/exceptions/user/UserNotFound.exception'
 import { LoginWrongPasswordException } from '../../../domain/exceptions/user/LoginWrongPassword.exception'
 import { PasswordNotSetException } from '../../../domain/exceptions/user/PasswordNotSet.exception'
+import {
+  accessTokenExpUnix,
+  generateRefreshTokenValue,
+  hashRefreshToken,
+  refreshTokenExpiresAtUnix
+} from '../../../infrastructure/driving-adapters/API/controllers/login/refreshToken.helper'
 
 export class LoginUseCase {
   private readonly _getUserByEmailService: GetUserByEmailService
   private readonly _getEntityByIdService: GetEntityByIdService
 
-  constructor (userRepository: UserRepository, entityRepository: EntityRepository) {
+  constructor (
+    userRepository: UserRepository,
+    entityRepository: EntityRepository,
+    private readonly _refreshTokenRepository: RefreshTokenRepository
+  ) {
     this._getUserByEmailService = new GetUserByEmailService(userRepository)
     this._getEntityByIdService = new GetEntityByIdService(entityRepository)
   }
 
-  /** Authenticates a user by email and password and returns a session JWT. */
-  async run (email: string, password: string, secret: string): Promise<{ token: string }> {
+  /** Authenticates a user by email and password and returns a session JWT plus refresh cookie value. */
+  async run (email: string, password: string, secret: string): Promise<{ token: string, refreshToken: string }> {
     const userToLogin = await this._getUserByEmailService.run(email)
 
     if (userToLogin === null) throw new UserNotFoundException()
@@ -36,15 +48,31 @@ export class LoginUseCase {
     delete userToLogin.password
 
     const token = jwt.sign({
-      exp: Math.floor(Date.now() / 1000) + (120 * 60),
+      exp: accessTokenExpUnix(),
       data: {
         user: userToLogin,
         entity: entity
       }
     }, secret)
 
+    const rawRefreshToken = generateRefreshTokenValue()
+    const tokenHash = hashRefreshToken(rawRefreshToken)
+    const familyId = crypto.randomUUID()
+    const nowUnix = Math.floor(Date.now() / 1000)
+    const expiresAt = refreshTokenExpiresAtUnix()
+
+    await this._refreshTokenRepository.saveNew({
+      tokenHash,
+      familyId,
+      userId: userToLogin.id,
+      expiresAt,
+      createdAt: nowUnix,
+      ttl: expiresAt
+    })
+
     return {
-      token
+      token,
+      refreshToken: rawRefreshToken
     }
   }
 }

@@ -31,7 +31,14 @@ export const validateToken = async (req: Request, res: Response, next: NextFunct
       return next(error)
     }
 
-    if (error instanceof jwt.JsonWebTokenError || error instanceof jwt.TokenExpiredError) {
+    if (error instanceof jwt.TokenExpiredError) {
+      return res.status(401).json({
+        message: 'Problemas con la sesión, por favor, inicie sesión nuevamente',
+        code: 'ACCESS_TOKEN_EXPIRED'
+      })
+    }
+
+    if (error instanceof jwt.JsonWebTokenError) {
       return next(new UnhandledException('Token'))
     }
 
