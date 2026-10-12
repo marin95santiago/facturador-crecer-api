@@ -7,3 +7,4 @@ dist
 console
 logs
 /issues
+deploy.prod.sh
