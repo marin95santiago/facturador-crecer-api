@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express'
 import { ForgotPasswordUseCase } from '../../../../../application/useCases/ForgotPassword'
 import { MissingPropertyException } from '../../../../../domain/exceptions/common/MissingProperty.exception'
-import { NodemailerEmailSender } from '../../../../../domain/services/email/NodemailerEmailSender'
+import { ResendEmailSender } from '../../../../../domain/services/email/ResendEmailSender'
 import { DynamoDBUserRepository } from '../../../../implementations/AWS/dynamoDB/DynamoDBUserRepository'
 
 /** Sends a password reset email for the given address without requiring a session. */
@@ -16,7 +16,7 @@ export const forgotPassword = async (req: Request, res: Response, next: NextFunc
   }
 
   const userRepository = new DynamoDBUserRepository()
-  const emailSender = new NodemailerEmailSender()
+  const emailSender = new ResendEmailSender()
   const forgotPasswordUseCase = new ForgotPasswordUseCase(userRepository, emailSender)
 
   try {

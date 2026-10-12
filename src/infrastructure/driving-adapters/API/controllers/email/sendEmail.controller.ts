@@ -1,10 +1,10 @@
 import { NextFunction, Request, Response } from 'express'
-import { NodemailerEmailSender } from '../../../../../domain/services/email/NodemailerEmailSender'
+import { ResendEmailSender } from '../../../../../domain/services/email/ResendEmailSender'
 import { SendEmailUseCase } from '../../../../../application/useCases/SendEmail'
 export const sendEmail = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   const { html, subject, to, cc } = req.body
 
-  const emailSender = new NodemailerEmailSender()
+  const emailSender = new ResendEmailSender()
   const sendEmailUseCase = new SendEmailUseCase(emailSender)
 
   try {

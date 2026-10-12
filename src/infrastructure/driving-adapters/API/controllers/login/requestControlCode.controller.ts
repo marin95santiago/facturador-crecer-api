@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express'
 import { DynamoDBUserRepository } from '../../../../implementations/AWS/dynamoDB/DynamoDBUserRepository'
 import { DynamoDBAuthTokenRepository } from '../../../../implementations/AWS/dynamoDB/DynamoDBAuthTokenRepository'
-import { NodemailerEmailSender } from '../../../../../domain/services/email/NodemailerEmailSender'
+import { ResendEmailSender } from '../../../../../domain/services/email/ResendEmailSender'
 import { RequestControlCodeUseCase } from '../../../../../application/useCases/RequestControlCode'
 
 const CONTROL_USER_DOMAIN = process.env.CONTROL_USER_DOMAIN ?? ''
@@ -14,7 +14,7 @@ export const requestControlCode = async (req: Request, res: Response, next: Next
 
   const userRepo = new DynamoDBUserRepository()
   const authTokenRepo = new DynamoDBAuthTokenRepository()
-  const emailSender = new NodemailerEmailSender()
+  const emailSender = new ResendEmailSender()
   const useCase = new RequestControlCodeUseCase(userRepo, authTokenRepo, emailSender, CONTROL_USER_DOMAIN, MASTER_EMAIL, AUTH_CODE_CHARS)
 
   try {
