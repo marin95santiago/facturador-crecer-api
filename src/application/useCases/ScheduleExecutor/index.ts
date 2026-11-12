@@ -8,6 +8,7 @@ import {
   getDayAndMonthFromCalendarDate,
   getDayOfWeekFromCalendarDate
 } from '../../../domain/services/utils/date.helper'
+
 export class ScheduleExecutorUseCase {
   private readonly _scheduleRepository: ScheduleRepository
   private readonly _electronicBillRepository: ElectronicBillRepository
@@ -20,117 +21,104 @@ export class ScheduleExecutorUseCase {
     this._electronicBillCreatorUseCase = new ElectronicBillCreatorUseCase(electronicBillRepository, entityRepository, subscriptionRepository)
   }
 
+  /** Runs scheduled bill generation and deletes schedules that reached their inclusive end date. */
   async run (): Promise<any[]> {
     try {
-      // Get all schedules
-      // const schedules = (await this._scheduleRepository.getByEntity('57986ca4-d290-4c80-994f-a8f4da4553b8', 'ElectronicBill')).schedules
       const schedules = await this._scheduleRepository.getAll()
 
       if (!schedules || schedules.length === 0) {
         throw 'No se encontraros procesos'
       }
 
-      const deleteSchedulePromises: Promise<any>[] = []
-      const getBillPromises: Promise<any>[] = []
+      const finishedActions: any[] = []
 
-      schedules.forEach(schedule => {
-        // Determinate if generate bill
-        const shouldGenerateBill = this.shouldGenerateBill(schedule.startDate, schedule.endDate ?? false , schedule.intervalDays)
-        
-        if (shouldGenerateBill.generateBill) {
-          // Get base bill
-          const bill = this._electronicBillRepository.getByNumber(schedule.entityId, Number(schedule.idForm))
-          getBillPromises.push(bill)
-        } else {
-          if (shouldGenerateBill.requireAction === this.DELETE_SCHEDULE) {
-            // Delete expired schedules
-            const deleteSchedulePromise = this._scheduleRepository.delete(schedule.entityId, schedule.code)
-            deleteSchedulePromises.push(deleteSchedulePromise)
-          }
-        }
-      })
+      for (const schedule of schedules) {
+        const decision = this.shouldGenerateBill(
+          schedule.startDate,
+          schedule.endDate ?? false,
+          schedule.intervalDays
+        )
 
-      const bills = await Promise.all(getBillPromises)
-      const deletedSchedules = await Promise.all(deleteSchedulePromises)
-      const finishedActions = deletedSchedules;
-
-      if (bills && bills.length > 0) {
-        for (const bill of bills) {
+        if (decision.generateBill) {
           try {
-            console.log(`Processing bill ${bill.number}...`);
+            const bill = await this._electronicBillRepository.getByNumber(schedule.entityId, Number(schedule.idForm))
+            console.log(`Processing bill ${bill.number}...`)
             const data = await this._electronicBillCreatorUseCase.run({
               ...bill,
               date: this.getCurrentDate('AAAA-MM-DD'),
               paymentDueDate: this.getCurrentDate('AAAA/MM/DD')
-            });
-            console.log(`Processed bill ${data.data.number}:`, data);
+            })
+            console.log(`Processed bill ${data.data.number}:`, data)
             finishedActions.push({
               bill: data.data.number,
               status: 'success'
-            });
+            })
+
+            if (decision.requireAction === this.DELETE_SCHEDULE) {
+              await this._scheduleRepository.delete(schedule.entityId, schedule.code)
+            }
           } catch (error) {
-            console.error(`Error processing bill ${bill.number}:`, error);
+            console.error(`Error processing bill ${schedule.idForm}:`, error)
             finishedActions.push({
-              sourceBill: bill.number,
+              sourceBill: schedule.idForm,
               status: 'error',
-              error: error,
-              data: bill
-            });
+              error: error
+            })
           }
 
-          // wait 2 seconds
-          await new Promise(resolve => setTimeout(resolve, 2000));
+          await new Promise(resolve => setTimeout(resolve, 2000))
+        } else if (decision.requireAction === this.DELETE_SCHEDULE) {
+          await this._scheduleRepository.delete(schedule.entityId, schedule.code)
         }
       }
 
-      const actions = finishedActions;
-
-      return actions
-      
+      return finishedActions
     } catch (error) {
       throw error
     }
   }
 
   shouldGenerateBill(startDate: string, endDate: string | false, interval: string) {
-    let response = {
+    const response = {
       generateBill: false,
       requireAction: ''
     }
 
     const currentDate = this.getCurrentDate('AAAA-MM-DD')
-    
-    if (endDate) {
-      if (endDate <= currentDate) {
-        response.requireAction = this.DELETE_SCHEDULE
-        return response
+
+    if (endDate && endDate < currentDate) {
+      response.requireAction = this.DELETE_SCHEDULE
+      return response
+    }
+
+    if (startDate === currentDate) {
+      response.generateBill = true
+    } else {
+      switch (interval) {
+        case 'weekly': {
+          const dayForStartDate = getDayOfWeekFromCalendarDate(startDate)
+          const dayForCurrentDate = getDayOfWeekFromCalendarDate(currentDate)
+          response.generateBill = (dayForStartDate === dayForCurrentDate)
+          break
+        }
+
+        case 'monthly': {
+          const dayMontStartDate = getDayAndMonthFromCalendarDate(startDate)
+          const dayMontCurrentDate = getDayAndMonthFromCalendarDate(currentDate)
+          response.generateBill = (dayMontStartDate.day === dayMontCurrentDate.day && dayMontStartDate.month !== dayMontCurrentDate.month)
+          break
+        }
+
+        default:
+          break
       }
     }
 
-    // Case first scheduled bill
-    if (startDate === currentDate) {
-      response.generateBill = true
-      return response
-    } 
-  
-    switch (interval) {
-      case 'weekly':
-        const dayForStartDate = getDayOfWeekFromCalendarDate(startDate)
-        const dayForCurrentDate = getDayOfWeekFromCalendarDate(currentDate)
-        response.generateBill = (dayForStartDate === dayForCurrentDate)
-        break
-  
-      case 'monthly':
-        const dayMontStartDate = getDayAndMonthFromCalendarDate(startDate)
-        const dayMontCurrentDate = getDayAndMonthFromCalendarDate(currentDate)
-  
-        response.generateBill = (dayMontStartDate.day === dayMontCurrentDate.day && dayMontStartDate.month !== dayMontCurrentDate.month)
-        break
-    
-      default:
-        break
+    // Inclusive end date: generate when due today, then delete after a successful run.
+    if (endDate && endDate === currentDate) {
+      response.requireAction = this.DELETE_SCHEDULE
     }
-  
+
     return response
   }
 
