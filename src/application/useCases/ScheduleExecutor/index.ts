@@ -42,12 +42,16 @@ export class ScheduleExecutorUseCase {
         if (decision.generateBill) {
           try {
             const bill = await this._electronicBillRepository.getByNumber(schedule.entityId, Number(schedule.idForm))
+            if (bill === null) {
+              throw new Error(`Scheduled base bill not found: idForm ${schedule.idForm}`)
+            }
             console.log(`Processing bill ${bill.number}...`)
-            const data = await this._electronicBillCreatorUseCase.run({
+            const billPayload = {
               ...bill,
               date: this.getCurrentDate('AAAA-MM-DD'),
               paymentDueDate: this.getCurrentDate('AAAA/MM/DD')
-            })
+            }
+            const data = await this._electronicBillCreatorUseCase.run(billPayload)
             console.log(`Processed bill ${data.data.number}:`, data)
             finishedActions.push({
               bill: data.data.number,
